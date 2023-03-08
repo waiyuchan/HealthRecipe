@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup
 
 
 def recipe_extractor(recipe_id):
+    """
+    下厨房菜谱提取器
+    :param recipe_id: 下厨房的菜谱ID，比如 `https://www.xiachufang.com/recipe/100561839/`，则菜谱ID为 `100561839`
+    :return: JSON格式的菜谱
+    """
     url = "https://www.xiachufang.com/recipe/{}/".format(recipe_id)
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
