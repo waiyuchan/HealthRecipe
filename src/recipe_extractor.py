@@ -44,5 +44,19 @@ def str_cleaner(string):
     return string.replace("\n", "").replace(" ", "")
 
 
-recipe = recipe_extractor("100561839")
-print(recipe)
+def recipe_printer(dict_obj):
+    print("菜名：{}".format(dict_obj["name"]))
+    print()
+    print("用料：")
+    for item in dict_obj["materials"]:
+        print("{} {}".format(item["name"], item["unit"]))
+    print()
+    print("做法：")
+    for i in range(len(dict_obj["methods"])):
+        print("{}. {}".format(i + 1, dict_obj["methods"][i]))
+
+
+if __name__ == '__main__':
+    recipe_id = "106605291"
+    recipe = recipe_extractor(recipe_id)
+    recipe_printer(recipe)
