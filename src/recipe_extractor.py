@@ -60,6 +60,6 @@ def recipe_printer(dict_obj):
 
 
 if __name__ == '__main__':
-    recipe_id = "106605291"
+    recipe_id = "106181674"
     recipe = recipe_extractor(recipe_id)
     recipe_printer(recipe)

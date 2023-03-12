@@ -8,6 +8,7 @@ class ES:
         self.es.indices.create(index='menu', ignore=400)
 
     def insert(self, menu_item=None, menu_items=None):
+        # 批量数据插入
         if menu_items is not None:
             bulk_data = []
             for item in menu_items:
@@ -18,6 +19,8 @@ class ES:
                     '_source': item
                 })
             self.es.bulk(index='menus', body=bulk_data, refresh=True)
+
+        # 单条数据插入
         self.es.index(index='menu', id=menu_item['xcf_id'], doc_type='doc', body=menu_item)
 
 
