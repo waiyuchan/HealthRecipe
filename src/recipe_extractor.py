@@ -1,3 +1,5 @@
+import json
+
 from lxml import etree
 import requests
 from bs4 import BeautifulSoup
@@ -45,6 +47,7 @@ def str_cleaner(string):
 
 
 def recipe_printer(dict_obj):
+    print(json.dumps(dict_obj, ensure_ascii=False))
     print("菜名：{}".format(dict_obj["name"]))
     print()
     print("用料：")

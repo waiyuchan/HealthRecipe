@@ -1,7 +1,7 @@
-class Query:
+class DataCenter:
 
     def __init__(self, dataset):
         self.dataset = dataset
 
-    def query_by_keyword(self, **kwargs):
+    def query(self, **kwargs):
         return

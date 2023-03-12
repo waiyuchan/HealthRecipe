@@ -3,3 +3,4 @@ itemadapter~=0.7.0
 requests~=2.28.2
 bs4
 lxml
+elasticsearch==6.3.1
