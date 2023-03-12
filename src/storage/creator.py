@@ -1,7 +1,7 @@
 import time
 
-from src.es import ES
-from src.recipe_extractor import recipe_extractor
+from src.storage.es import ES
+from src.collection.recipe_extractor import recipe_extractor
 
 
 def get_xcf_id_list_from_txt(file_path):
@@ -43,5 +43,5 @@ class Creator(object):
 
 
 if __name__ == '__main__':
-    xcf_id_list = get_xcf_id_list_from_txt("../data/menu.txt")
+    xcf_id_list = get_xcf_id_list_from_txt("../../data/menu.txt")
     Creator().es_batch_insert(xcf_id_list)
