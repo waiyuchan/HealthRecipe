@@ -1,4 +1,4 @@
-# Health Menu Recommendation System: 养生菜单推荐系统
+# Health Recipe: 养生食谱
 
 ## 功能目录
 
