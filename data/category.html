@@ -1,0 +1,2510 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)https://www.xiachufang.com/category/ -->
+<html class=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script async="" src="./category_files/sensorsdata-1.12.18.min.js"></script><script src="https://hm.baidu.com/hm.js?ecd4feb5c351cc02583045a5813b5142"></script><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script>
+  
+	
+
+    <title>分类浏览_下厨房</title>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://s.chuimg.com/">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-itunes-app" content="app-id=460979760">
+    <meta name="baidu-site-verification" content="HNAbHIxmbo">
+    <meta name="renderer" content="webkit">
+    <link href="https://s.chuimg.com/favicon.ico" rel="shortcut icon">
+
+    <script src="https://dup.baidustatic.com/js/ds.js"></script>
+  
+
+<link rel="canonical" href="https://www.xiachufang.com/category/">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.xiachufang.com/category/">
+<link rel="alternate" media="handheld" href="https://m.xiachufang.com/category/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="keywords" content="食材,食材大全,食物,食物分类大全">
+	<meta name="description" content="下厨房为您提供上万种食材的图文介绍，包括详细的营养成分、功效、如何挑选、储存方法、适用人群、制作小知识、饮食小知识、相关菜谱等内容。">
+
+  
+	<link href="./category_files/26e376c6566536444b27.css" rel="stylesheet" type="text/css">
+	<link href="./category_files/45997d1fc7fb2dbaa355.css" rel="stylesheet" type="text/css">
+
+  <!--[if IE 8]>
+  <script src="https://s.chuimg.com/js/2013/lib/es5-shim.min.js"></script>
+  <script src="https://s.chuimg.com/js/2013/lib/es5-sham.min.js"></script>
+  <script src="https://s.chuimg.com/js/2013/lib/console-polyfill.js"></script>
+  <script>
+    document.createElement('ng-include');
+    document.createElement('ng-pluralize');
+    document.createElement('ng-view');
+
+    // Optionally these for CSS
+    document.createElement('ng:include');
+    document.createElement('ng:pluralize');
+    document.createElement('ng:view');
+  </script>
+  <![endif]-->
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ecd4feb5c351cc02583045a5813b5142";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  
+
+<script type="text/javascript">
+  (function(para) {
+    var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+    if(typeof(w['sensorsDataAnalytic201505']) !== 'undefined') {
+        return false;
+    }
+    w['sensorsDataAnalytic201505'] = n;
+    w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+    var ifs = ['track','quick','register','registerPage','registerOnce','clearAllRegister','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister'];
+    for (var i = 0; i < ifs.length; i++) {
+      w[n][ifs[i]] = w[n].call(null, ifs[i]);
+    }
+    if (!w[n]._t) {
+      x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+      x.async = 1;
+      x.src = p;
+      y.parentNode.insertBefore(x, y);
+      w[n].para = para;
+    }
+  })({
+      sdk_url: '//s.chuimg.com/upload/sensorsdata-1.12.18.min.js',
+      name: 'sensors',
+      server_url:('https:' == document.location.protocol ? 'https://' : 'http://') +'trackbeat.xiachufang.com/sa?project=xcf',
+      heatmap_url: '//s.chuimg.com/upload/heatmap-1.12.18.min.js',
+      heatmap: {
+        clickmap:'default',
+        scroll_notice_map: 'default'
+      },
+      debug_mode: false,
+      use_client_time: true,
+      use_app_track: true,
+      show_log: false
+    });
+    function getCookie (name) {
+      var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'))
+      if (arr != null) {
+        return unescape(arr[2])
+      }
+      return ''
+    }
+    function getPDID () {
+      var pdid = localStorage.getItem('xcf_pdid')
+      if (!pdid) {
+        pdid = Math.random().toString().slice(2, 15)
+        localStorage.setItem('xcf_pdid', pdid)
+      }
+      return pdid
+    }
+    var userId = getCookie('user_id');
+    var presetProperties = {
+      $referrer: document.referrer,
+      $referrer_host: document.referrer && document.referrer.split('/')[2],
+      $url: location.href,
+      $url_path: location.pathname,
+      $title: document.title,
+      $os: /ipad|iphone|ipod/i.test(navigator.userAgent) ? 'iOS' : 'Android',
+      $ua: navigator.userAgent,
+      pdid: getPDID()
+    };
+    if (userId) {
+      sensors.login(userId);
+      presetProperties['xcf_user_id'] = +userId
+    }
+    sensors.registerPage(presetProperties);
+    sensors.quick('autoTrack', presetProperties);
+</script>
+
+  
+
+
+
+
+<script type="text/javascript">
+_gaq=[['_setAccount', 'UA-22069234-1'],
+      ['_setCustomVar', 1, 'user', 'anonymous', 3],
+      ['_setCustomVar', 4, 'dish_title', 'dish_title_0', 3],
+      ['_setCustomVar', 5, 'recommend_recipe_list', 'recommend_recipe_list_1', 3],
+      ['_trackPageview'],['_trackPageLoadTime']];
+
+
+(function(){
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})()
+</script>
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+<div class="page-outer">
+  <!--begin of page-container-->
+  <div class="page-container">
+    
+    
+<div class="category-container plain">
+    
+	
+	<h1 class="page-title">分类浏览</h1>
+	<div class="block-bg p40 font16">
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat52320">热门专题</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="  clearfix">
+                        <li class="cates-list-first clearfix">
+                            特色食品
+                            <!--span>（23964）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/40073/" target="_blank">小吃</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51276/" target="_blank">酱</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20167/" target="_blank">沙拉</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20137/" target="_blank">凉菜</a></li>
+                    </ul>
+                    <ul class="  clearfix">
+                        <li class="cates-list-first clearfix">
+                            特殊场合
+                            <!--span>（16519）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/40071/" target="_blank">早餐</a></li>
+                        <li><a href="https://www.xiachufang.com/category/40072/" target="_blank">下午茶</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20171/" target="_blank">便当</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51971/" target="_blank">圣诞节</a></li>
+                    </ul>
+                    <ul class="cates-border-none  clearfix">
+                        <li class="cates-list-first clearfix">
+                            菜式
+                            <!--span>（33280）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/40076/" target="_blank">家常菜</a></li>
+                        <li><a href="https://www.xiachufang.com/category/40077/" target="_blank">快手菜</a></li>
+                        <li><a href="https://www.xiachufang.com/category/40078/" target="_blank">下饭菜</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51848/" target="_blank">素菜</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52354/" target="_blank">大鱼大肉</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51743/" target="_blank">下酒菜</a></li>
+                    </ul>
+                    <ul class="cates-border-none cates-idx-2-5 clearfix">
+                        <li class="cates-list-first clearfix">
+                            功效
+                            <!--span>（3772）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/30048/" target="_blank">减肥</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52138/" target="_blank">美容</a></li>
+                        <li><a href="https://www.xiachufang.com/category/30053/" target="_blank">润肺抗燥</a></li>
+                    </ul>
+                    <ul class="cates-border-none cates-idx-2-5 clearfix">
+                        <li class="cates-list-first clearfix">
+                            人群
+                            <!--span>（2677）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/30042/" target="_blank">儿童</a></li>
+                        <li><a href="https://www.xiachufang.com/category/30044/" target="_blank">婴幼儿</a></li>
+                        <li><a href="https://www.xiachufang.com/category/30043/" target="_blank">老人</a></li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat52343">
+                        菜式
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat40076"><a href="https://www.xiachufang.com/category/40076/" target="_blank">家常菜</a>
+                            </li>
+                            <li id="cat40077"><a href="https://www.xiachufang.com/category/40077/" target="_blank">快手菜</a>
+                            </li>
+                            <li id="cat40078"><a href="https://www.xiachufang.com/category/40078/" target="_blank">下饭菜</a>
+                            </li>
+                            <li id="cat51848"><a href="https://www.xiachufang.com/category/51848/" target="_blank">素菜</a>
+                            </li>
+                            <li id="cat52354"><a href="https://www.xiachufang.com/category/52354/" target="_blank">大鱼大肉</a>
+                            </li>
+                            <li id="cat51743"><a href="https://www.xiachufang.com/category/51743/" target="_blank">下酒菜</a>
+                            </li>
+                            <li id="cat52351"><a href="https://www.xiachufang.com/category/52351/" target="_blank">小清新</a>
+                            </li>
+                            <li id="cat51940"><a href="https://www.xiachufang.com/category/51940/" target="_blank">创意菜</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52344">
+                        特色食品
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat40073"><a href="https://www.xiachufang.com/category/40073/" target="_blank">小吃</a>
+                            </li>
+                            <li id="cat51276"><a href="https://www.xiachufang.com/category/51276/" target="_blank">酱</a>
+                            </li>
+                            <li id="cat20167"><a href="https://www.xiachufang.com/category/20167/" target="_blank">沙拉</a>
+                            </li>
+                            <li id="cat20137"><a href="https://www.xiachufang.com/category/20137/" target="_blank">凉菜</a>
+                            </li>
+                            <li id="cat40074"><a href="https://www.xiachufang.com/category/40074/" target="_blank">零食</a>
+                            </li>
+                            <li id="cat20157"><a href="https://www.xiachufang.com/category/20157/" target="_blank">三明治</a>
+                            </li>
+                            <li id="cat20152"><a href="https://www.xiachufang.com/category/20152/" target="_blank">月饼</a>
+                            </li>
+                            <li id="cat52335"><a href="https://www.xiachufang.com/category/52335/" target="_blank">蒸蛋</a>
+                            </li>
+                            <li id="cat20172"><a href="https://www.xiachufang.com/category/20172/" target="_blank">寿司</a>
+                            </li>
+                            <li id="cat51870"><a href="https://www.xiachufang.com/category/51870/" target="_blank">粽子</a>
+                            </li>
+                            <li id="cat1007463"><a href="https://www.xiachufang.com/category/1007463/" target="_blank">鸡蛋羹</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52342">
+                        特殊场合
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat40071"><a href="https://www.xiachufang.com/category/40071/" target="_blank">早餐</a>
+                            </li>
+                            <li id="cat40072"><a href="https://www.xiachufang.com/category/40072/" target="_blank">下午茶</a>
+                            </li>
+                            <li id="cat20171"><a href="https://www.xiachufang.com/category/20171/" target="_blank">便当</a>
+                            </li>
+                            <li id="cat51971"><a href="https://www.xiachufang.com/category/51971/" target="_blank">圣诞节</a>
+                            </li>
+                            <li id="cat40075"><a href="https://www.xiachufang.com/category/40075/" target="_blank">年夜饭</a>
+                            </li>
+                            <li id="cat52107"><a href="https://www.xiachufang.com/category/52107/" target="_blank">深夜食堂</a>
+                            </li>
+                            <li id="cat51822"><a href="https://www.xiachufang.com/category/51822/" target="_blank">情人节</a>
+                            </li>
+                            <li id="cat51865"><a href="https://www.xiachufang.com/category/51865/" target="_blank">宵夜</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52341">
+                        功效
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat30048"><a href="https://www.xiachufang.com/category/30048/" target="_blank">减肥</a>
+                            </li>
+                            <li id="cat52138"><a href="https://www.xiachufang.com/category/52138/" target="_blank">美容</a>
+                            </li>
+                            <li id="cat30053"><a href="https://www.xiachufang.com/category/30053/" target="_blank">润肺抗燥</a>
+                            </li>
+                            <li id="cat30051"><a href="https://www.xiachufang.com/category/30051/" target="_blank">补血</a>
+                            </li>
+                            <li id="cat52334"><a href="https://www.xiachufang.com/category/52334/" target="_blank">清热祛火</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52340">
+                        人群
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat30042"><a href="https://www.xiachufang.com/category/30042/" target="_blank">儿童</a>
+                            </li>
+                            <li id="cat30044"><a href="https://www.xiachufang.com/category/30044/" target="_blank">婴幼儿</a>
+                            </li>
+                            <li id="cat30043"><a href="https://www.xiachufang.com/category/30043/" target="_blank">老人</a>
+                            </li>
+                            <li id="cat52333"><a href="https://www.xiachufang.com/category/52333/" target="_blank">孕产妇</a>
+                            </li>
+                            <li id="cat1012138"><a href="https://www.xiachufang.com/category/1012138/" target="_blank">宝宝食谱</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52352">
+                        视频专题
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat52353"><a href="https://www.xiachufang.com/category/52353/" target="_blank">味蕾工坊</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat52319">烘焙甜品饮料</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/51761/" target="_blank">烘焙</a>
+                            <!--span>（41090）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/20158/" target="_blank">蛋糕</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52411/" target="_blank">面包</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20160/" target="_blank">饼干</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52447/" target="_blank">吐司</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52435/" target="_blank">乳酪蛋糕</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51906/" target="_blank">曲奇</a></li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/20135/" target="_blank">甜品</a>
+                            <!--span>（9296）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/20163/" target="_blank">布丁</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51867/" target="_blank">冷饮</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20165/" target="_blank">果酱</a></li>
+                        <li><a href="https://www.xiachufang.com/category/50680/" target="_blank">糖水</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20166/" target="_blank">冰淇淋</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51871/" target="_blank">果冻</a></li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/20136/" target="_blank">饮品</a>
+                            <!--span>（5114）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/20168/" target="_blank">咖啡</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52088/" target="_blank">豆浆</a></li>
+                        <li><a href="https://www.xiachufang.com/category/20169/" target="_blank">奶茶</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51942/" target="_blank">酒</a></li>
+                        <li><a href="https://www.xiachufang.com/category/51823/" target="_blank">果汁</a></li>
+                        <li><a href="https://www.xiachufang.com/category/52332/" target="_blank">花草茶</a></li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat51761">
+                        <a href="https://www.xiachufang.com/category/51761/" target="_blank">烘焙</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat20158"><a href="https://www.xiachufang.com/category/20158/" target="_blank">蛋糕</a>
+                            </li>
+                            <li id="cat52411"><a href="https://www.xiachufang.com/category/52411/" target="_blank">面包</a>
+                            </li>
+                            <li id="cat20160"><a href="https://www.xiachufang.com/category/20160/" target="_blank">饼干</a>
+                            </li>
+                            <li id="cat51916"><a href="https://www.xiachufang.com/category/51916/" target="_blank">披萨</a>
+                            </li>
+                            <li id="cat20164"><a href="https://www.xiachufang.com/category/20164/" target="_blank">派</a>
+                            </li>
+                            <li id="cat52464"><a href="https://www.xiachufang.com/category/52464/" target="_blank">司康</a>
+                            </li>
+                            <li id="cat52463"><a href="https://www.xiachufang.com/category/52463/" target="_blank">塔</a>
+                            </li>
+                            <li id="cat20162"><a href="https://www.xiachufang.com/category/20162/" target="_blank">泡芙</a>
+                            </li>
+                            <li id="cat52465"><a href="https://www.xiachufang.com/category/52465/" target="_blank">奶油霜</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat20135">
+                        <a href="https://www.xiachufang.com/category/20135/" target="_blank">甜品</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat20163"><a href="https://www.xiachufang.com/category/20163/" target="_blank">布丁</a>
+                            </li>
+                            <li id="cat51867"><a href="https://www.xiachufang.com/category/51867/" target="_blank">冷饮</a>
+                            </li>
+                            <li id="cat20165"><a href="https://www.xiachufang.com/category/20165/" target="_blank">果酱</a>
+                            </li>
+                            <li id="cat50680"><a href="https://www.xiachufang.com/category/50680/" target="_blank">糖水</a>
+                            </li>
+                            <li id="cat20166"><a href="https://www.xiachufang.com/category/20166/" target="_blank">冰淇淋</a>
+                            </li>
+                            <li id="cat51871"><a href="https://www.xiachufang.com/category/51871/" target="_blank">果冻</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat20136">
+                        <a href="https://www.xiachufang.com/category/20136/" target="_blank">饮品</a>
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat20168"><a href="https://www.xiachufang.com/category/20168/" target="_blank">咖啡</a>
+                            </li>
+                            <li id="cat52088"><a href="https://www.xiachufang.com/category/52088/" target="_blank">豆浆</a>
+                            </li>
+                            <li id="cat20169"><a href="https://www.xiachufang.com/category/20169/" target="_blank">奶茶</a>
+                            </li>
+                            <li id="cat51942"><a href="https://www.xiachufang.com/category/51942/" target="_blank">酒</a>
+                            </li>
+                            <li id="cat51823"><a href="https://www.xiachufang.com/category/51823/" target="_blank">果汁</a>
+                            </li>
+                            <li id="cat52332"><a href="https://www.xiachufang.com/category/52332/" target="_blank">花草茶</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat2478">肉类</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/5399/" target="_blank">猪</a>
+                            <!--span>（18530）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/731/" target="_blank">猪肉</a>
+                        <span class="cates-list-mini-score">
+                            5.7
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/227/" target="_blank">排骨</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/792/" target="_blank">猪肉末</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1304/" target="_blank">五花肉</a>
+                        <span class="cates-list-mini-score">
+                            5.4
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/423/" target="_blank">猪蹄</a>
+                        <span class="cates-list-mini-score">
+                            7.2
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5357/" target="_blank">肉丝</a>
+                        <span class="cates-list-mini-score">
+                            5.3
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5392/" target="_blank">肋排</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/580/" target="_blank">瘦肉</a>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/104/" target="_blank">鸡</a>
+                            <!--span>（13849）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/1261/" target="_blank">鸡翅</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5391/" target="_blank">鸡胸</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1509/" target="_blank">鸡腿</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5396/" target="_blank">鸡翅中</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5194/" target="_blank">鸡腿肉</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1337/" target="_blank">鸡爪</a>
+                        <span class="cates-list-mini-score">
+                            5.5
+                        </span>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/5443/" target="_blank">牛</a>
+                            <!--span>（6841）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/1445/" target="_blank">牛肉</a>
+                        <span class="cates-list-mini-score">
+                            6.1
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/612/" target="_blank">牛腩</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/938/" target="_blank">牛排</a>
+                        <span class="cates-list-mini-score">
+                            5.1
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/2629/" target="_blank">肥牛</a>
+                        <span class="cates-list-mini-score">
+                            5.2
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5375/" target="_blank">牛里脊</a>
+                        <span class="cates-list-mini-score">
+                            7.3
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5403/" target="_blank">牛腱</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/5418/" target="_blank">羊</a>
+                            <!--span>（1636）</span-->
+                        </li>
+                        
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/275/" target="_blank">鸭</a>
+                            <!--span>（1603）</span-->
+                        </li>
+                        
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat5399">
+                        <a href="https://www.xiachufang.com/category/5399/" target="_blank">猪</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat731"><a href="https://www.xiachufang.com/category/731/" target="_blank">猪肉</a>
+                            <span class="cates-list-mini-score">
+                                5.7
+                            </span>
+                            </li>
+                            <li id="cat227"><a href="https://www.xiachufang.com/category/227/" target="_blank">排骨</a>
+                            </li>
+                            <li id="cat792"><a href="https://www.xiachufang.com/category/792/" target="_blank">猪肉末</a>
+                            </li>
+                            <li id="cat1304"><a href="https://www.xiachufang.com/category/1304/" target="_blank">五花肉</a>
+                            <span class="cates-list-mini-score">
+                                5.4
+                            </span>
+                            </li>
+                            <li id="cat423"><a href="https://www.xiachufang.com/category/423/" target="_blank">猪蹄</a>
+                            <span class="cates-list-mini-score">
+                                7.2
+                            </span>
+                            </li>
+                            <li id="cat580"><a href="https://www.xiachufang.com/category/580/" target="_blank">瘦肉</a>
+                            </li>
+                            <li id="cat3297"><a href="https://www.xiachufang.com/category/3297/" target="_blank">里脊</a>
+                            <span class="cates-list-mini-score">
+                                7.2
+                            </span>
+                            </li>
+                            <li id="cat733"><a href="https://www.xiachufang.com/category/733/" target="_blank">猪肝</a>
+                            <span class="cates-list-mini-score">
+                                8.3
+                            </span>
+                            </li>
+                            <li id="cat5374"><a href="https://www.xiachufang.com/category/5374/" target="_blank">猪排</a>
+                            </li>
+                            <li id="cat735"><a href="https://www.xiachufang.com/category/735/" target="_blank">猪肚</a>
+                            </li>
+                            <li id="cat898"><a href="https://www.xiachufang.com/category/898/" target="_blank">猪皮</a>
+                            </li>
+                            <li id="cat883"><a href="https://www.xiachufang.com/category/883/" target="_blank">猪骨</a>
+                            </li>
+                            <li id="cat2618"><a href="https://www.xiachufang.com/category/2618/" target="_blank">肥肠</a>
+                            </li>
+                            <li id="cat2190"><a href="https://www.xiachufang.com/category/2190/" target="_blank">猪油</a>
+                            </li>
+                            <li id="cat865"><a href="https://www.xiachufang.com/category/865/" target="_blank">猪腰</a>
+                            </li>
+                            <li id="cat220"><a href="https://www.xiachufang.com/category/220/" target="_blank">猪耳朵</a>
+                            </li>
+                            <li id="cat333"><a href="https://www.xiachufang.com/category/333/" target="_blank">猪心</a>
+                            </li>
+                            <li id="cat876"><a href="https://www.xiachufang.com/category/876/" target="_blank">猪血</a>
+                            </li>
+                            <li id="cat742"><a href="https://www.xiachufang.com/category/742/" target="_blank">猪肺</a>
+                            </li>
+                            <li id="cat1003189"><a href="https://www.xiachufang.com/category/1003189/" target="_blank">肉末</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat104">
+                        <a href="https://www.xiachufang.com/category/104/" target="_blank">鸡</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat1261"><a href="https://www.xiachufang.com/category/1261/" target="_blank">鸡翅</a>
+                            </li>
+                            <li id="cat5391"><a href="https://www.xiachufang.com/category/5391/" target="_blank">鸡胸</a>
+                            </li>
+                            <li id="cat1509"><a href="https://www.xiachufang.com/category/1509/" target="_blank">鸡腿</a>
+                            </li>
+                            <li id="cat1337"><a href="https://www.xiachufang.com/category/1337/" target="_blank">鸡爪</a>
+                            <span class="cates-list-mini-score">
+                                5.5
+                            </span>
+                            </li>
+                            <li id="cat1136"><a href="https://www.xiachufang.com/category/1136/" target="_blank">鸡肉</a>
+                            <span class="cates-list-mini-score">
+                                5.6
+                            </span>
+                            </li>
+                            <li id="cat1222"><a href="https://www.xiachufang.com/category/1222/" target="_blank">乌鸡</a>
+                            </li>
+                            <li id="cat1227"><a href="https://www.xiachufang.com/category/1227/" target="_blank">鸡胗</a>
+                            </li>
+                            <li id="cat570"><a href="https://www.xiachufang.com/category/570/" target="_blank">土鸡</a>
+                            </li>
+                            <li id="cat393"><a href="https://www.xiachufang.com/category/393/" target="_blank">仔鸡</a>
+                            </li>
+                            <li id="cat278"><a href="https://www.xiachufang.com/category/278/" target="_blank">三黄鸡</a>
+                            </li>
+                            <li id="cat1131"><a href="https://www.xiachufang.com/category/1131/" target="_blank">鸡肝</a>
+                            </li>
+                            <li id="cat3155"><a href="https://www.xiachufang.com/category/3155/" target="_blank">老母鸡</a>
+                            </li>
+                            <li id="cat1127"><a href="https://www.xiachufang.com/category/1127/" target="_blank">鸡心</a>
+                            </li>
+                            <li id="cat738"><a href="https://www.xiachufang.com/category/738/" target="_blank">柴鸡</a>
+                            </li>
+                            <li id="cat1004800"><a href="https://www.xiachufang.com/category/1004800/" target="_blank">童子鸡</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat5443">
+                        <a href="https://www.xiachufang.com/category/5443/" target="_blank">牛</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat1445"><a href="https://www.xiachufang.com/category/1445/" target="_blank">牛肉</a>
+                            <span class="cates-list-mini-score">
+                                6.1
+                            </span>
+                            </li>
+                            <li id="cat612"><a href="https://www.xiachufang.com/category/612/" target="_blank">牛腩</a>
+                            </li>
+                            <li id="cat938"><a href="https://www.xiachufang.com/category/938/" target="_blank">牛排</a>
+                            <span class="cates-list-mini-score">
+                                5.1
+                            </span>
+                            </li>
+                            <li id="cat2629"><a href="https://www.xiachufang.com/category/2629/" target="_blank">肥牛</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat5375"><a href="https://www.xiachufang.com/category/5375/" target="_blank">牛里脊</a>
+                            <span class="cates-list-mini-score">
+                                7.3
+                            </span>
+                            </li>
+                            <li id="cat5403"><a href="https://www.xiachufang.com/category/5403/" target="_blank">牛腱</a>
+                            </li>
+                            <li id="cat2915"><a href="https://www.xiachufang.com/category/2915/" target="_blank">牛尾</a>
+                            </li>
+                            <li id="cat479"><a href="https://www.xiachufang.com/category/479/" target="_blank">牛肉末</a>
+                            </li>
+                            <li id="cat808"><a href="https://www.xiachufang.com/category/808/" target="_blank">牛筋</a>
+                            </li>
+                            <li id="cat908"><a href="https://www.xiachufang.com/category/908/" target="_blank">牛百叶</a>
+                            </li>
+                            <li id="cat715"><a href="https://www.xiachufang.com/category/715/" target="_blank">牛骨</a>
+                            </li>
+                            <li id="cat1012245"><a href="https://www.xiachufang.com/category/1012245/" target="_blank">牛肉馅</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat5418">
+                        <a href="https://www.xiachufang.com/category/5418/" target="_blank">羊</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat674"><a href="https://www.xiachufang.com/category/674/" target="_blank">羊肉</a>
+                            <span class="cates-list-mini-score">
+                                7.2
+                            </span>
+                            </li>
+                            <li id="cat145"><a href="https://www.xiachufang.com/category/145/" target="_blank">羊排</a>
+                            <span class="cates-list-mini-score">
+                                6.8
+                            </span>
+                            </li>
+                            <li id="cat3249"><a href="https://www.xiachufang.com/category/3249/" target="_blank">羊腿</a>
+                            </li>
+                            <li id="cat156"><a href="https://www.xiachufang.com/category/156/" target="_blank">羊肉片</a>
+                            </li>
+                            <li id="cat1243"><a href="https://www.xiachufang.com/category/1243/" target="_blank">羊蝎子</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat275">
+                        <a href="https://www.xiachufang.com/category/275/" target="_blank">鸭</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat1190"><a href="https://www.xiachufang.com/category/1190/" target="_blank">鸭腿</a>
+                            </li>
+                            <li id="cat274"><a href="https://www.xiachufang.com/category/274/" target="_blank">鸭肉</a>
+                            </li>
+                            <li id="cat115"><a href="https://www.xiachufang.com/category/115/" target="_blank">老鸭</a>
+                            </li>
+                            <li id="cat374"><a href="https://www.xiachufang.com/category/374/" target="_blank">鸭胗</a>
+                            </li>
+                            <li id="cat533"><a href="https://www.xiachufang.com/category/533/" target="_blank">鸭血</a>
+                            </li>
+                            <li id="cat714"><a href="https://www.xiachufang.com/category/714/" target="_blank">鸭掌</a>
+                            </li>
+                            <li id="cat2653"><a href="https://www.xiachufang.com/category/2653/" target="_blank">鸭翅</a>
+                            </li>
+                            <li id="cat4068"><a href="https://www.xiachufang.com/category/4068/" target="_blank">鸭舌</a>
+                            </li>
+                            <li id="cat271"><a href="https://www.xiachufang.com/category/271/" target="_blank">鸭肠</a>
+                            </li>
+                            <li id="cat1081"><a href="https://www.xiachufang.com/category/1081/" target="_blank">鸭脖</a>
+                            </li>
+                            <li id="cat277"><a href="https://www.xiachufang.com/category/277/" target="_blank">鸭肝</a>
+                            </li>
+                            <li id="cat1012232"><a href="https://www.xiachufang.com/category/1012232/" target="_blank">鸭爪</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat1442">
+                        <a href="https://www.xiachufang.com/category/1442/" target="_blank">鸽子</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat605">
+                        <a href="https://www.xiachufang.com/category/605/" target="_blank">牛蛙</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat4628">
+                        <a href="https://www.xiachufang.com/category/4628/" target="_blank">鹅</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat719">
+                        <a href="https://www.xiachufang.com/category/719/" target="_blank">兔肉</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat4350">
+                        <a href="https://www.xiachufang.com/category/4350/" target="_blank">雪蛤</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat3314">
+                        <a href="https://www.xiachufang.com/category/3314/" target="_blank">田鸡</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat5151">
+                        <a href="https://www.xiachufang.com/category/5151/" target="_blank">鹌鹑</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat4458">
+                        <a href="https://www.xiachufang.com/category/4458/" target="_blank">火鸡</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat576">
+                        <a href="https://www.xiachufang.com/category/576/" target="_blank">驴肉</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat2865">
+                        <a href="https://www.xiachufang.com/category/2865/" target="_blank">鹿肉</a>
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat4616">蔬菜水果</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            果实类蔬菜
+                            <!--span>（31034）</span-->
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.xiachufang.com/category/601/" target="_blank">彩椒</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/718/" target="_blank">番茄</a>
+                        <span class="cates-list-mini-score">
+                            5.2
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/455/" target="_blank">南瓜</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/208/" target="_blank">玉米</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/449/" target="_blank">红椒</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/178/" target="_blank">茄子</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/1364/" target="_blank">黄瓜</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/5318/" target="_blank">玉米粒</a>
+                        <span class="cates-list-mini-score">
+                            6.5
+                        </span>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            根茎蔬菜
+                            <!--span>（20579）</span-->
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.xiachufang.com/category/206/" target="_blank">土豆</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/4359/" target="_blank">萝卜</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/632/" target="_blank">紫薯</a>
+                        <span class="cates-list-mini-score">
+                            5.3
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/747/" target="_blank">红薯</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/1137/" target="_blank">胡萝卜</a>
+                        <span class="cates-list-mini-score">
+                            5.2
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/524/" target="_blank">山药</a>
+                        <span class="cates-list-mini-score">
+                            6.2
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/503/" target="_blank">藕</a>
+                        <span class="cates-list-mini-score">
+                            6.1
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/886/" target="_blank">芋头</a>
+                        <span class="cates-list-mini-score">
+                            7.3
+                        </span>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cates-list-first clearfix">
+                            叶类蔬菜
+                            <!--span>（17626）</span-->
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.xiachufang.com/category/725/" target="_blank">芹菜</a>
+                        <span class="cates-list-mini-score">
+                            6.2
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/1105/" target="_blank">白菜</a>
+                        <span class="cates-list-mini-score">
+                            6.5
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/918/" target="_blank">韭菜</a>
+                        <span class="cates-list-mini-score">
+                            5.2
+                        </span>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            菌菇类
+                            <!--span>（10473）</span-->
+                        </li>
+                        
+                        <li>
+                        <a href="https://www.xiachufang.com/category/468/" target="_blank">香菇</a>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/443/" target="_blank">杏鲍菇</a>
+                        <span class="cates-list-mini-score">
+                            5.8
+                        </span>
+                        </li>
+                        <li>
+                        <a href="https://www.xiachufang.com/category/1389/" target="_blank">银耳</a>
+                        </li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat2485">
+                        果实类蔬菜
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat601"><a href="https://www.xiachufang.com/category/601/" target="_blank">彩椒</a>
+                            </li>
+                            <li id="cat718"><a href="https://www.xiachufang.com/category/718/" target="_blank">番茄</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat455"><a href="https://www.xiachufang.com/category/455/" target="_blank">南瓜</a>
+                            </li>
+                            <li id="cat208"><a href="https://www.xiachufang.com/category/208/" target="_blank">玉米</a>
+                            </li>
+                            <li id="cat178"><a href="https://www.xiachufang.com/category/178/" target="_blank">茄子</a>
+                            </li>
+                            <li id="cat1364"><a href="https://www.xiachufang.com/category/1364/" target="_blank">黄瓜</a>
+                            </li>
+                            <li id="cat1215"><a href="https://www.xiachufang.com/category/1215/" target="_blank">豇豆</a>
+                            </li>
+                            <li id="cat662"><a href="https://www.xiachufang.com/category/662/" target="_blank">青椒</a>
+                            <span class="cates-list-mini-score">
+                                5.5
+                            </span>
+                            </li>
+                            <li id="cat155"><a href="https://www.xiachufang.com/category/155/" target="_blank">苦瓜</a>
+                            </li>
+                            <li id="cat151"><a href="https://www.xiachufang.com/category/151/" target="_blank">冬瓜</a>
+                            </li>
+                            <li id="cat454"><a href="https://www.xiachufang.com/category/454/" target="_blank">丝瓜</a>
+                            </li>
+                            <li id="cat501"><a href="https://www.xiachufang.com/category/501/" target="_blank">秋葵</a>
+                            </li>
+                            <li id="cat790"><a href="https://www.xiachufang.com/category/790/" target="_blank">西葫芦</a>
+                            </li>
+                            <li id="cat819"><a href="https://www.xiachufang.com/category/819/" target="_blank">毛豆</a>
+                            </li>
+                            <li id="cat935"><a href="https://www.xiachufang.com/category/935/" target="_blank">豌豆</a>
+                            <span class="cates-list-mini-score">
+                                5.8
+                            </span>
+                            </li>
+                            <li id="cat1063"><a href="https://www.xiachufang.com/category/1063/" target="_blank">四季豆</a>
+                            </li>
+                            <li id="cat1370"><a href="https://www.xiachufang.com/category/1370/" target="_blank">荷兰豆</a>
+                            <span class="cates-list-mini-score">
+                                7.3
+                            </span>
+                            </li>
+                            <li id="cat1209"><a href="https://www.xiachufang.com/category/1209/" target="_blank">蚕豆</a>
+                            </li>
+                            <li id="cat1292"><a href="https://www.xiachufang.com/category/1292/" target="_blank">圣女果</a>
+                            </li>
+                            <li id="cat214"><a href="https://www.xiachufang.com/category/214/" target="_blank">扁豆</a>
+                            </li>
+                            <li id="cat1163"><a href="https://www.xiachufang.com/category/1163/" target="_blank">刀豆</a>
+                            </li>
+                            <li id="cat4219"><a href="https://www.xiachufang.com/category/4219/" target="_blank">瓠瓜</a>
+                            </li>
+                            <li id="cat298"><a href="https://www.xiachufang.com/category/298/" target="_blank">玉米笋</a>
+                            </li>
+                            <li id="cat1009064"><a href="https://www.xiachufang.com/category/1009064/" target="_blank">西红柿</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2490">
+                        <a href="https://www.xiachufang.com/category/2490/" target="_blank">水果</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat5464"><a href="https://www.xiachufang.com/category/5464/" target="_blank">时令水果</a>
+                            </li>
+                            <li id="cat1299"><a href="https://www.xiachufang.com/category/1299/" target="_blank">柠檬</a>
+                            </li>
+                            <li id="cat2819"><a href="https://www.xiachufang.com/category/2819/" target="_blank">椰子</a>
+                            <span class="cates-list-mini-score">
+                                6.1
+                            </span>
+                            </li>
+                            <li id="cat1128"><a href="https://www.xiachufang.com/category/1128/" target="_blank">草莓</a>
+                            <span class="cates-list-mini-score">
+                                9.5
+                            </span>
+                            </li>
+                            <li id="cat1082"><a href="https://www.xiachufang.com/category/1082/" target="_blank">橙</a>
+                            </li>
+                            <li id="cat3140"><a href="https://www.xiachufang.com/category/3140/" target="_blank">牛油果</a>
+                            </li>
+                            <li id="cat1195"><a href="https://www.xiachufang.com/category/1195/" target="_blank">木瓜</a>
+                            </li>
+                            <li id="cat471"><a href="https://www.xiachufang.com/category/471/" target="_blank">山楂</a>
+                            </li>
+                            <li id="cat833"><a href="https://www.xiachufang.com/category/833/" target="_blank">蓝莓</a>
+                            </li>
+                            <li id="cat1101"><a href="https://www.xiachufang.com/category/1101/" target="_blank">西瓜</a>
+                            </li>
+                            <li id="cat209"><a href="https://www.xiachufang.com/category/209/" target="_blank">柚子</a>
+                            </li>
+                            <li id="cat1280"><a href="https://www.xiachufang.com/category/1280/" target="_blank">火龙果</a>
+                            </li>
+                            <li id="cat1311"><a href="https://www.xiachufang.com/category/1311/" target="_blank">樱桃</a>
+                            </li>
+                            <li id="cat602"><a href="https://www.xiachufang.com/category/602/" target="_blank">榴莲</a>
+                            </li>
+                            <li id="cat5364"><a href="https://www.xiachufang.com/category/5364/" target="_blank">西柚</a>
+                            </li>
+                            <li id="cat2687"><a href="https://www.xiachufang.com/category/2687/" target="_blank">桃</a>
+                            </li>
+                            <li id="cat3286"><a href="https://www.xiachufang.com/category/3286/" target="_blank">葡萄</a>
+                            </li>
+                            <li id="cat517"><a href="https://www.xiachufang.com/category/517/" target="_blank">金橘</a>
+                            </li>
+                            <li id="cat1032"><a href="https://www.xiachufang.com/category/1032/" target="_blank">黄桃</a>
+                            </li>
+                            <li id="cat1246"><a href="https://www.xiachufang.com/category/1246/" target="_blank">百香果</a>
+                            </li>
+                            <li id="cat9"><a href="https://www.xiachufang.com/category/9/" target="_blank">杨梅</a>
+                            </li>
+                            <li id="cat1075"><a href="https://www.xiachufang.com/category/1075/" target="_blank">桔子</a>
+                            </li>
+                            <li id="cat3173"><a href="https://www.xiachufang.com/category/3173/" target="_blank">荔枝</a>
+                            </li>
+                            <li id="cat3109"><a href="https://www.xiachufang.com/category/3109/" target="_blank">无花果</a>
+                            </li>
+                            <li id="cat4471"><a href="https://www.xiachufang.com/category/4471/" target="_blank">石榴</a>
+                            </li>
+                            <li id="cat2571"><a href="https://www.xiachufang.com/category/2571/" target="_blank">杏子</a>
+                            </li>
+                            <li id="cat2825"><a href="https://www.xiachufang.com/category/2825/" target="_blank">桑葚</a>
+                            </li>
+                            <li id="cat925"><a href="https://www.xiachufang.com/category/925/" target="_blank">哈密瓜</a>
+                            </li>
+                            <li id="cat2948"><a href="https://www.xiachufang.com/category/2948/" target="_blank">柿子</a>
+                            </li>
+                            <li id="cat2669"><a href="https://www.xiachufang.com/category/2669/" target="_blank">李子</a>
+                            </li>
+                            <li id="cat4595"><a href="https://www.xiachufang.com/category/4595/" target="_blank">青梅</a>
+                            </li>
+                            <li id="cat5158"><a href="https://www.xiachufang.com/category/5158/" target="_blank">枇杷</a>
+                            </li>
+                            <li id="cat1028"><a href="https://www.xiachufang.com/category/1028/" target="_blank">香瓜</a>
+                            </li>
+                            <li id="cat822"><a href="https://www.xiachufang.com/category/822/" target="_blank">甘蔗</a>
+                            </li>
+                            <li id="cat5157"><a href="https://www.xiachufang.com/category/5157/" target="_blank">覆盆子</a>
+                            </li>
+                            <li id="cat122"><a href="https://www.xiachufang.com/category/122/" target="_blank">杨桃</a>
+                            </li>
+                            <li id="cat1012312"><a href="https://www.xiachufang.com/category/1012312/" target="_blank">橘子</a>
+                            </li>
+                            <li id="cat1004542"><a href="https://www.xiachufang.com/category/1004542/" target="_blank">金桔</a>
+                            </li>
+                            <li id="cat1012315"><a href="https://www.xiachufang.com/category/1012315/" target="_blank">杏</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2484">
+                        根茎蔬菜
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat206"><a href="https://www.xiachufang.com/category/206/" target="_blank">土豆</a>
+                            </li>
+                            <li id="cat4359"><a href="https://www.xiachufang.com/category/4359/" target="_blank">萝卜</a>
+                            </li>
+                            <li id="cat632"><a href="https://www.xiachufang.com/category/632/" target="_blank">紫薯</a>
+                            <span class="cates-list-mini-score">
+                                5.3
+                            </span>
+                            </li>
+                            <li id="cat747"><a href="https://www.xiachufang.com/category/747/" target="_blank">红薯</a>
+                            </li>
+                            <li id="cat1137"><a href="https://www.xiachufang.com/category/1137/" target="_blank">胡萝卜</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat524"><a href="https://www.xiachufang.com/category/524/" target="_blank">山药</a>
+                            <span class="cates-list-mini-score">
+                                6.2
+                            </span>
+                            </li>
+                            <li id="cat503"><a href="https://www.xiachufang.com/category/503/" target="_blank">藕</a>
+                            <span class="cates-list-mini-score">
+                                6.1
+                            </span>
+                            </li>
+                            <li id="cat886"><a href="https://www.xiachufang.com/category/886/" target="_blank">芋头</a>
+                            <span class="cates-list-mini-score">
+                                7.3
+                            </span>
+                            </li>
+                            <li id="cat534"><a href="https://www.xiachufang.com/category/534/" target="_blank">笋</a>
+                            <span class="cates-list-mini-score">
+                                8.1
+                            </span>
+                            </li>
+                            <li id="cat1516"><a href="https://www.xiachufang.com/category/1516/" target="_blank">茭白</a>
+                            </li>
+                            <li id="cat692"><a href="https://www.xiachufang.com/category/692/" target="_blank">马蹄</a>
+                            <span class="cates-list-mini-score">
+                                9.2
+                            </span>
+                            </li>
+                            <li id="cat132"><a href="https://www.xiachufang.com/category/132/" target="_blank">牛蒡</a>
+                            </li>
+                            <li id="cat868"><a href="https://www.xiachufang.com/category/868/" target="_blank">菱角</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2486">
+                        叶类蔬菜
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat725"><a href="https://www.xiachufang.com/category/725/" target="_blank">芹菜</a>
+                            <span class="cates-list-mini-score">
+                                6.2
+                            </span>
+                            </li>
+                            <li id="cat1105"><a href="https://www.xiachufang.com/category/1105/" target="_blank">白菜</a>
+                            <span class="cates-list-mini-score">
+                                6.5
+                            </span>
+                            </li>
+                            <li id="cat918"><a href="https://www.xiachufang.com/category/918/" target="_blank">韭菜</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat211"><a href="https://www.xiachufang.com/category/211/" target="_blank">菠菜</a>
+                            <span class="cates-list-mini-score">
+                                7.7
+                            </span>
+                            </li>
+                            <li id="cat787"><a href="https://www.xiachufang.com/category/787/" target="_blank">西兰花</a>
+                            <span class="cates-list-mini-score">
+                                6.4
+                            </span>
+                            </li>
+                            <li id="cat622"><a href="https://www.xiachufang.com/category/622/" target="_blank">圆白菜</a>
+                            <span class="cates-list-mini-score">
+                                5.5
+                            </span>
+                            </li>
+                            <li id="cat133"><a href="https://www.xiachufang.com/category/133/" target="_blank">花椰菜</a>
+                            </li>
+                            <li id="cat923"><a href="https://www.xiachufang.com/category/923/" target="_blank">莴苣</a>
+                            </li>
+                            <li id="cat1138"><a href="https://www.xiachufang.com/category/1138/" target="_blank">青菜</a>
+                            <span class="cates-list-mini-score">
+                                5.9
+                            </span>
+                            </li>
+                            <li id="cat1176"><a href="https://www.xiachufang.com/category/1176/" target="_blank">娃娃菜</a>
+                            <span class="cates-list-mini-score">
+                                6.0
+                            </span>
+                            </li>
+                            <li id="cat1355"><a href="https://www.xiachufang.com/category/1355/" target="_blank">生菜</a>
+                            </li>
+                            <li id="cat306"><a href="https://www.xiachufang.com/category/306/" target="_blank">甘蓝</a>
+                            </li>
+                            <li id="cat1144"><a href="https://www.xiachufang.com/category/1144/" target="_blank">蒜薹</a>
+                            </li>
+                            <li id="cat435"><a href="https://www.xiachufang.com/category/435/" target="_blank">紫甘蓝</a>
+                            </li>
+                            <li id="cat1213"><a href="https://www.xiachufang.com/category/1213/" target="_blank">空心菜</a>
+                            </li>
+                            <li id="cat666"><a href="https://www.xiachufang.com/category/666/" target="_blank">油菜</a>
+                            <span class="cates-list-mini-score">
+                                5.5
+                            </span>
+                            </li>
+                            <li id="cat894"><a href="https://www.xiachufang.com/category/894/" target="_blank">荠菜</a>
+                            <span class="cates-list-mini-score">
+                                6.9
+                            </span>
+                            </li>
+                            <li id="cat1230"><a href="https://www.xiachufang.com/category/1230/" target="_blank">香椿</a>
+                            </li>
+                            <li id="cat981"><a href="https://www.xiachufang.com/category/981/" target="_blank">茼蒿</a>
+                            </li>
+                            <li id="cat3063"><a href="https://www.xiachufang.com/category/3063/" target="_blank">菜心</a>
+                            </li>
+                            <li id="cat121"><a href="https://www.xiachufang.com/category/121/" target="_blank">芥兰</a>
+                            </li>
+                            <li id="cat1216"><a href="https://www.xiachufang.com/category/1216/" target="_blank">黄花菜</a>
+                            </li>
+                            <li id="cat188"><a href="https://www.xiachufang.com/category/188/" target="_blank">韭黄</a>
+                            </li>
+                            <li id="cat3113"><a href="https://www.xiachufang.com/category/3113/" target="_blank">苋菜</a>
+                            </li>
+                            <li id="cat1343"><a href="https://www.xiachufang.com/category/1343/" target="_blank">紫苏</a>
+                            </li>
+                            <li id="cat1196"><a href="https://www.xiachufang.com/category/1196/" target="_blank">芥菜</a>
+                            </li>
+                            <li id="cat1469"><a href="https://www.xiachufang.com/category/1469/" target="_blank">油麦菜</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat328"><a href="https://www.xiachufang.com/category/328/" target="_blank">豌豆苗</a>
+                            </li>
+                            <li id="cat2959"><a href="https://www.xiachufang.com/category/2959/" target="_blank">苦菊</a>
+                            </li>
+                            <li id="cat1295"><a href="https://www.xiachufang.com/category/1295/" target="_blank">青蒜</a>
+                            <span class="cates-list-mini-score">
+                                9.3
+                            </span>
+                            </li>
+                            <li id="cat4120"><a href="https://www.xiachufang.com/category/4120/" target="_blank">鱼腥草</a>
+                            </li>
+                            <li id="cat253"><a href="https://www.xiachufang.com/category/253/" target="_blank">马兰</a>
+                            </li>
+                            <li id="cat139"><a href="https://www.xiachufang.com/category/139/" target="_blank">蕨菜</a>
+                            </li>
+                            <li id="cat2677"><a href="https://www.xiachufang.com/category/2677/" target="_blank">西洋菜</a>
+                            </li>
+                            <li id="cat1171"><a href="https://www.xiachufang.com/category/1171/" target="_blank">水芹</a>
+                            </li>
+                            <li id="cat2657"><a href="https://www.xiachufang.com/category/2657/" target="_blank">儿菜</a>
+                            </li>
+                            <li id="cat609"><a href="https://www.xiachufang.com/category/609/" target="_blank">豌豆尖</a>
+                            </li>
+                            <li id="cat647"><a href="https://www.xiachufang.com/category/647/" target="_blank">芝麻菜</a>
+                            </li>
+                            <li id="cat4179"><a href="https://www.xiachufang.com/category/4179/" target="_blank">芦蒿</a>
+                            </li>
+                            <li id="cat4086"><a href="https://www.xiachufang.com/category/4086/" target="_blank">穿心莲</a>
+                            </li>
+                            <li id="cat2558"><a href="https://www.xiachufang.com/category/2558/" target="_blank">孢子甘蓝</a>
+                            </li>
+                            <li id="cat3298"><a href="https://www.xiachufang.com/category/3298/" target="_blank">萝卜苗</a>
+                            </li>
+                            <li id="cat4127"><a href="https://www.xiachufang.com/category/4127/" target="_blank">红菜苔</a>
+                            </li>
+                            <li id="cat3041"><a href="https://www.xiachufang.com/category/3041/" target="_blank">牛至</a>
+                            </li>
+                            <li id="cat4475"><a href="https://www.xiachufang.com/category/4475/" target="_blank">蒿子杆</a>
+                            </li>
+                            <li id="cat1008865"><a href="https://www.xiachufang.com/category/1008865/" target="_blank">包菜</a>
+                            </li>
+                            <li id="cat1010303"><a href="https://www.xiachufang.com/category/1010303/" target="_blank">莴笋</a>
+                            <span class="cates-list-mini-score">
+                                6.7
+                            </span>
+                            </li>
+                            <li id="cat1000901"><a href="https://www.xiachufang.com/category/1000901/" target="_blank">花菜</a>
+                            <span class="cates-list-mini-score">
+                                6.1
+                            </span>
+                            </li>
+                            <li id="cat1003510"><a href="https://www.xiachufang.com/category/1003510/" target="_blank">蒜苔</a>
+                            <span class="cates-list-mini-score">
+                                6.7
+                            </span>
+                            </li>
+                            <li id="cat1005601"><a href="https://www.xiachufang.com/category/1005601/" target="_blank">豆苗</a>
+                            </li>
+                            <li id="cat1012331"><a href="https://www.xiachufang.com/category/1012331/" target="_blank">披萨草</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2488">
+                        菌菇类
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat468"><a href="https://www.xiachufang.com/category/468/" target="_blank">香菇</a>
+                            </li>
+                            <li id="cat443"><a href="https://www.xiachufang.com/category/443/" target="_blank">杏鲍菇</a>
+                            <span class="cates-list-mini-score">
+                                5.8
+                            </span>
+                            </li>
+                            <li id="cat1389"><a href="https://www.xiachufang.com/category/1389/" target="_blank">银耳</a>
+                            </li>
+                            <li id="cat1383"><a href="https://www.xiachufang.com/category/1383/" target="_blank">木耳</a>
+                            <span class="cates-list-mini-score">
+                                5.3
+                            </span>
+                            </li>
+                            <li id="cat998"><a href="https://www.xiachufang.com/category/998/" target="_blank">金针菇</a>
+                            <span class="cates-list-mini-score">
+                                5.6
+                            </span>
+                            </li>
+                            <li id="cat881"><a href="https://www.xiachufang.com/category/881/" target="_blank">蘑菇</a>
+                            <span class="cates-list-mini-score">
+                                5.3
+                            </span>
+                            </li>
+                            <li id="cat416"><a href="https://www.xiachufang.com/category/416/" target="_blank">茶树菇</a>
+                            </li>
+                            <li id="cat175"><a href="https://www.xiachufang.com/category/175/" target="_blank">平菇</a>
+                            <span class="cates-list-mini-score">
+                                6.7
+                            </span>
+                            </li>
+                            <li id="cat3885"><a href="https://www.xiachufang.com/category/3885/" target="_blank">松茸</a>
+                            </li>
+                            <li id="cat1187"><a href="https://www.xiachufang.com/category/1187/" target="_blank">鸡腿菇</a>
+                            </li>
+                            <li id="cat1229"><a href="https://www.xiachufang.com/category/1229/" target="_blank">草菇</a>
+                            </li>
+                            <li id="cat4314"><a href="https://www.xiachufang.com/category/4314/" target="_blank">竹荪</a>
+                            </li>
+                            <li id="cat1461"><a href="https://www.xiachufang.com/category/1461/" target="_blank">蟹味菇</a>
+                            </li>
+                            <li id="cat466"><a href="https://www.xiachufang.com/category/466/" target="_blank">花菇</a>
+                            </li>
+                            <li id="cat1109"><a href="https://www.xiachufang.com/category/1109/" target="_blank">猴头菇</a>
+                            </li>
+                            <li id="cat4099"><a href="https://www.xiachufang.com/category/4099/" target="_blank">牛肝菌</a>
+                            </li>
+                            <li id="cat4379"><a href="https://www.xiachufang.com/category/4379/" target="_blank">灵芝</a>
+                            </li>
+                            <li id="cat13"><a href="https://www.xiachufang.com/category/13/" target="_blank">榛蘑</a>
+                            </li>
+                            <li id="cat1481"><a href="https://www.xiachufang.com/category/1481/" target="_blank">白玉菇</a>
+                            </li>
+                            <li id="cat5154"><a href="https://www.xiachufang.com/category/5154/" target="_blank">姬松茸</a>
+                            </li>
+                            <li id="cat429"><a href="https://www.xiachufang.com/category/429/" target="_blank">滑子菇</a>
+                            </li>
+                            <li id="cat5153"><a href="https://www.xiachufang.com/category/5153/" target="_blank">发菜</a>
+                            </li>
+                            <li id="cat4270"><a href="https://www.xiachufang.com/category/4270/" target="_blank">白灵菇</a>
+                            </li>
+                            <li id="cat508"><a href="https://www.xiachufang.com/category/508/" target="_blank">袖珍菇</a>
+                            </li>
+                            <li id="cat3234"><a href="https://www.xiachufang.com/category/3234/" target="_blank">双孢菇</a>
+                            </li>
+                            <li id="cat1006515"><a href="https://www.xiachufang.com/category/1006515/" target="_blank">秀珍菇</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat4630">
+                        花朵植物类
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat1756"><a href="https://www.xiachufang.com/category/1756/" target="_blank">茶叶</a>
+                            </li>
+                            <li id="cat2376"><a href="https://www.xiachufang.com/category/2376/" target="_blank">桂花</a>
+                            </li>
+                            <li id="cat3956"><a href="https://www.xiachufang.com/category/3956/" target="_blank">玫瑰</a>
+                            </li>
+                            <li id="cat2004"><a href="https://www.xiachufang.com/category/2004/" target="_blank">薄荷</a>
+                            </li>
+                            <li id="cat74"><a href="https://www.xiachufang.com/category/74/" target="_blank">菊花</a>
+                            </li>
+                            <li id="cat5155"><a href="https://www.xiachufang.com/category/5155/" target="_blank">洛神花</a>
+                            </li>
+                            <li id="cat5156"><a href="https://www.xiachufang.com/category/5156/" target="_blank">茉莉花</a>
+                            </li>
+                            <li id="cat3315"><a href="https://www.xiachufang.com/category/3315/" target="_blank">槐花</a>
+                            </li>
+                            <li id="cat3117"><a href="https://www.xiachufang.com/category/3117/" target="_blank">金银花</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat52318">汤粥主食</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <div class="cates-list-limit clearfix">
+                        <ul class="">
+                            <li class="cates-list-first clearfix">
+                                <a href="https://www.xiachufang.com/category/20130/" target="_blank">汤羹</a>
+                                <!--span>（16407）</span-->
+                            </li>
+                        </ul>
+                        <ul class="">
+                            <li class="cates-list-first clearfix">
+                                <a href="https://www.xiachufang.com/category/20132/" target="_blank">饭</a>
+                                <!--span>（13729）</span-->
+                            </li>
+                        </ul>
+                        <ul class="cates-border-none">
+                            <li class="cates-list-first clearfix">
+                                <a href="https://www.xiachufang.com/category/20134/" target="_blank">饼</a>
+                                <!--span>（9297）</span-->
+                            </li>
+                        </ul>
+                        <ul class="cates-border-none">
+                            <li class="cates-list-first clearfix">
+                                <a href="https://www.xiachufang.com/category/20131/" target="_blank">粥</a>
+                                <!--span>（4628）</span-->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat20130">
+                        <a href="https://www.xiachufang.com/category/20130/" target="_blank">汤羹</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20132">
+                        <a href="https://www.xiachufang.com/category/20132/" target="_blank">饭</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat20143"><a href="https://www.xiachufang.com/category/20143/" target="_blank">炒饭</a>
+                            </li>
+                            <li id="cat50580"><a href="https://www.xiachufang.com/category/50580/" target="_blank">饭团</a>
+                            </li>
+                            <li id="cat20140"><a href="https://www.xiachufang.com/category/20140/" target="_blank">盖浇饭</a>
+                            </li>
+                            <li id="cat51888"><a href="https://www.xiachufang.com/category/51888/" target="_blank">煲仔饭</a>
+                            </li>
+                            <li id="cat20144"><a href="https://www.xiachufang.com/category/20144/" target="_blank">焗饭</a>
+                            </li>
+                            <li id="cat20142"><a href="https://www.xiachufang.com/category/20142/" target="_blank">烩饭</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat20134">
+                        <a href="https://www.xiachufang.com/category/20134/" target="_blank">饼</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20131">
+                        <a href="https://www.xiachufang.com/category/20131/" target="_blank">粥</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20148">
+                        <a href="https://www.xiachufang.com/category/20148/" target="_blank">饺子</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20147">
+                        <a href="https://www.xiachufang.com/category/20147/" target="_blank">馒头</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20157">
+                        <a href="https://www.xiachufang.com/category/20157/" target="_blank">三明治</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat20150">
+                        <a href="https://www.xiachufang.com/category/20150/" target="_blank">馄饨</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat50336">
+                        <a href="https://www.xiachufang.com/category/50336/" target="_blank">包子</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat1010937">
+                        汤
+                    </h4>
+                    <ul class=" has-bottom-border">
+                    </ul>
+                    <h4 class="font16" id="cat1025">
+                        <a href="https://www.xiachufang.com/category/1025/" target="_blank">面条</a>
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat20146"><a href="https://www.xiachufang.com/category/20146/" target="_blank">拌面</a>
+                            </li>
+                            <li id="cat51091"><a href="https://www.xiachufang.com/category/51091/" target="_blank">炒面</a>
+                            </li>
+                            <li id="cat52421"><a href="https://www.xiachufang.com/category/52421/" target="_blank">汤面</a>
+                            </li>
+                            <li id="cat52144"><a href="https://www.xiachufang.com/category/52144/" target="_blank">凉面</a>
+                            </li>
+                            <li id="cat20145"><a href="https://www.xiachufang.com/category/20145/" target="_blank">焖面</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat52321">口味特色</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <div class="cates-list-limit clearfix">
+                        <ul class="">
+                            <li class="cates-list-first clearfix">
+                                烹调方法
+                                <!--span>（24694）</span-->
+                            </li>
+                            
+                            <li><a href="https://www.xiachufang.com/category/51715/" target="_blank">煎</a></li>
+                            <li><a href="https://www.xiachufang.com/category/51750/" target="_blank">蒸</a></li>
+                            <li><a href="https://www.xiachufang.com/category/40067/" target="_blank">炖</a></li>
+                            <li><a href="https://www.xiachufang.com/category/51526/" target="_blank">红烧</a></li>
+                        </ul>
+                        <ul class="">
+                            <li class="cates-list-first clearfix">
+                                口味
+                                <!--span>（16559）</span-->
+                            </li>
+                            
+                            <li><a href="https://www.xiachufang.com/category/51359/" target="_blank">辣</a></li>
+                            <li><a href="https://www.xiachufang.com/category/51922/" target="_blank">咖喱</a></li>
+                            <li><a href="https://www.xiachufang.com/category/40066/" target="_blank">糖醋</a></li>
+                            <li><a href="https://www.xiachufang.com/category/52413/" target="_blank">蒜香</a></li>
+                        </ul>
+                        <ul class="cates-border-none">
+                            <li class="cates-list-first clearfix">
+                                器具
+                                <!--span>（11865）</span-->
+                            </li>
+                            
+                            <li><a href="https://www.xiachufang.com/category/40057/" target="_blank">烤箱</a></li>
+                            <li><a href="https://www.xiachufang.com/category/52369/" target="_blank">烤箱菜</a></li>
+                            <li><a href="https://www.xiachufang.com/category/51313/" target="_blank">电饭煲</a></li>
+                        </ul>
+                        <ul class="cates-border-none">
+                            <li class="cates-list-first clearfix">
+                                异国风味
+                                <!--span>（6170）</span-->
+                            </li>
+                            
+                            <li><a href="https://www.xiachufang.com/category/40081/" target="_blank">日式</a></li>
+                            <li><a href="https://www.xiachufang.com/category/40080/" target="_blank">韩式</a></li>
+                            <li><a href="https://www.xiachufang.com/category/40079/" target="_blank">西式</a></li>
+                        </ul>
+                    </div>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat52337">
+                        烹调方法
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat51715"><a href="https://www.xiachufang.com/category/51715/" target="_blank">煎</a>
+                            </li>
+                            <li id="cat51750"><a href="https://www.xiachufang.com/category/51750/" target="_blank">蒸</a>
+                            </li>
+                            <li id="cat40067"><a href="https://www.xiachufang.com/category/40067/" target="_blank">炖</a>
+                            </li>
+                            <li id="cat51526"><a href="https://www.xiachufang.com/category/51526/" target="_blank">红烧</a>
+                            </li>
+                            <li id="cat51329"><a href="https://www.xiachufang.com/category/51329/" target="_blank">炸</a>
+                            </li>
+                            <li id="cat40068"><a href="https://www.xiachufang.com/category/40068/" target="_blank">卤</a>
+                            </li>
+                            <li id="cat40062"><a href="https://www.xiachufang.com/category/40062/" target="_blank">干锅</a>
+                            </li>
+                            <li id="cat40063"><a href="https://www.xiachufang.com/category/40063/" target="_blank">火锅</a>
+                            </li>
+                            <li id="cat51891"><a href="https://www.xiachufang.com/category/51891/" target="_blank">免烤</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52339">
+                        口味
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat51359"><a href="https://www.xiachufang.com/category/51359/" target="_blank">辣</a>
+                            </li>
+                            <li id="cat51922"><a href="https://www.xiachufang.com/category/51922/" target="_blank">咖喱</a>
+                            </li>
+                            <li id="cat40066"><a href="https://www.xiachufang.com/category/40066/" target="_blank">糖醋</a>
+                            </li>
+                            <li id="cat52413"><a href="https://www.xiachufang.com/category/52413/" target="_blank">蒜香</a>
+                            </li>
+                            <li id="cat51449"><a href="https://www.xiachufang.com/category/51449/" target="_blank">酸甜</a>
+                            </li>
+                            <li id="cat52407"><a href="https://www.xiachufang.com/category/52407/" target="_blank">奶香</a>
+                            </li>
+                            <li id="cat52401"><a href="https://www.xiachufang.com/category/52401/" target="_blank">孜然</a>
+                            </li>
+                            <li id="cat51875"><a href="https://www.xiachufang.com/category/51875/" target="_blank">鱼香</a>
+                            </li>
+                            <li id="cat52399"><a href="https://www.xiachufang.com/category/52399/" target="_blank">五香</a>
+                            </li>
+                            <li id="cat51460"><a href="https://www.xiachufang.com/category/51460/" target="_blank">清淡</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52336">
+                        器具
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat40057"><a href="https://www.xiachufang.com/category/40057/" target="_blank">烤箱</a>
+                            </li>
+                            <li id="cat51313"><a href="https://www.xiachufang.com/category/51313/" target="_blank">电饭煲</a>
+                            </li>
+                            <li id="cat40059"><a href="https://www.xiachufang.com/category/40059/" target="_blank">微波炉</a>
+                            </li>
+                            <li id="cat40060"><a href="https://www.xiachufang.com/category/40060/" target="_blank">平底锅</a>
+                            </li>
+                            <li id="cat51909"><a href="https://www.xiachufang.com/category/51909/" target="_blank">塔吉锅</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat52338">
+                        异国风味
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat40081"><a href="https://www.xiachufang.com/category/40081/" target="_blank">日式</a>
+                            </li>
+                            <li id="cat40080"><a href="https://www.xiachufang.com/category/40080/" target="_blank">韩式</a>
+                            </li>
+                            <li id="cat40079"><a href="https://www.xiachufang.com/category/40079/" target="_blank">西式</a>
+                            </li>
+                            <li id="cat51305"><a href="https://www.xiachufang.com/category/51305/" target="_blank">西餐</a>
+                            </li>
+                            <li id="cat51965"><a href="https://www.xiachufang.com/category/51965/" target="_blank">东南亚</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat2481">水产</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/957/" target="_blank">鱼</a>
+                            <!--span>（9213）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/5404/" target="_blank">海水鱼</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5448/" target="_blank">淡水鱼</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/50/" target="_blank">三文鱼</a>
+                        <span class="cates-list-mini-score">
+                            5.4
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1491/" target="_blank">鲫鱼</a>
+                        <span class="cates-list-mini-score">
+                            5.8
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1285/" target="_blank">金枪鱼</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/100/" target="_blank">黄鱼</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1003/" target="_blank">带鱼</a>
+                        <span class="cates-list-mini-score">
+                            5.4
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1072/" target="_blank">鳕鱼</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/469/" target="_blank">虾</a>
+                            <!--span>（6344）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/826/" target="_blank">虾仁</a>
+                        <span class="cates-list-mini-score">
+                            5.4
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/875/" target="_blank">海米</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1053/" target="_blank">虾皮</a>
+                        <span class="cates-list-mini-score">
+                            5.2
+                        </span>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1191/" target="_blank">明虾</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/41/" target="_blank">基围虾</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/2918/" target="_blank">龙虾</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5322/" target="_blank">小龙虾</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/76/" target="_blank">河虾</a>
+                        </li>
+                    </ul>
+                    <ul class="">
+                        <li class="cates-list-first clearfix">
+                            贝
+                            <!--span>（2478）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/5282/" target="_blank">蛤蜊</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/176/" target="_blank">干贝</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/21/" target="_blank">鲍鱼</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            <a href="https://www.xiachufang.com/category/1183/" target="_blank">螃蟹</a>
+                            <!--span>（992）</span-->
+                        </li>
+                        
+                        <li><a href="https://www.xiachufang.com/category/953/" target="_blank">梭子蟹</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/478/" target="_blank">大闸蟹</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/515/" target="_blank">蟹肉</a>
+                        </li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat957">
+                        <a href="https://www.xiachufang.com/category/957/" target="_blank">鱼</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat5404"><a href="https://www.xiachufang.com/category/5404/" target="_blank">海水鱼</a>
+                            </li>
+                            <li id="cat5448"><a href="https://www.xiachufang.com/category/5448/" target="_blank">淡水鱼</a>
+                            </li>
+                            <li id="cat523"><a href="https://www.xiachufang.com/category/523/" target="_blank">鱼头</a>
+                            </li>
+                            <li id="cat3042"><a href="https://www.xiachufang.com/category/3042/" target="_blank">鱼干</a>
+                            </li>
+                            <li id="cat427"><a href="https://www.xiachufang.com/category/427/" target="_blank">鱼籽</a>
+                            </li>
+                            <li id="cat5152"><a href="https://www.xiachufang.com/category/5152/" target="_blank">鱼肚</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat469">
+                        <a href="https://www.xiachufang.com/category/469/" target="_blank">虾</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat826"><a href="https://www.xiachufang.com/category/826/" target="_blank">虾仁</a>
+                            <span class="cates-list-mini-score">
+                                5.4
+                            </span>
+                            </li>
+                            <li id="cat875"><a href="https://www.xiachufang.com/category/875/" target="_blank">海米</a>
+                            </li>
+                            <li id="cat1053"><a href="https://www.xiachufang.com/category/1053/" target="_blank">虾皮</a>
+                            <span class="cates-list-mini-score">
+                                5.2
+                            </span>
+                            </li>
+                            <li id="cat1191"><a href="https://www.xiachufang.com/category/1191/" target="_blank">明虾</a>
+                            </li>
+                            <li id="cat41"><a href="https://www.xiachufang.com/category/41/" target="_blank">基围虾</a>
+                            </li>
+                            <li id="cat2918"><a href="https://www.xiachufang.com/category/2918/" target="_blank">龙虾</a>
+                            </li>
+                            <li id="cat5322"><a href="https://www.xiachufang.com/category/5322/" target="_blank">小龙虾</a>
+                            </li>
+                            <li id="cat76"><a href="https://www.xiachufang.com/category/76/" target="_blank">河虾</a>
+                            </li>
+                            <li id="cat3362"><a href="https://www.xiachufang.com/category/3362/" target="_blank">海虾</a>
+                            </li>
+                            <li id="cat3402"><a href="https://www.xiachufang.com/category/3402/" target="_blank">皮皮虾</a>
+                            </li>
+                            <li id="cat1002"><a href="https://www.xiachufang.com/category/1002/" target="_blank">北极虾</a>
+                            </li>
+                            <li id="cat1024"><a href="https://www.xiachufang.com/category/1024/" target="_blank">虾干</a>
+                            </li>
+                            <li id="cat2714"><a href="https://www.xiachufang.com/category/2714/" target="_blank">青虾</a>
+                            </li>
+                            <li id="cat215"><a href="https://www.xiachufang.com/category/215/" target="_blank">草虾</a>
+                            </li>
+                            <li id="cat1159"><a href="https://www.xiachufang.com/category/1159/" target="_blank">海白虾</a>
+                            </li>
+                            <li id="cat1007968"><a href="https://www.xiachufang.com/category/1007968/" target="_blank">虾米</a>
+                            <span class="cates-list-mini-score">
+                                7.1
+                            </span>
+                            </li>
+                            <li id="cat1002652"><a href="https://www.xiachufang.com/category/1002652/" target="_blank">大虾</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat4553">
+                        贝
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat5282"><a href="https://www.xiachufang.com/category/5282/" target="_blank">蛤蜊</a>
+                            </li>
+                            <li id="cat176"><a href="https://www.xiachufang.com/category/176/" target="_blank">干贝</a>
+                            </li>
+                            <li id="cat21"><a href="https://www.xiachufang.com/category/21/" target="_blank">鲍鱼</a>
+                            </li>
+                            <li id="cat1488"><a href="https://www.xiachufang.com/category/1488/" target="_blank">扇贝</a>
+                            </li>
+                            <li id="cat330"><a href="https://www.xiachufang.com/category/330/" target="_blank">牡蛎</a>
+                            </li>
+                            <li id="cat3992"><a href="https://www.xiachufang.com/category/3992/" target="_blank">青口</a>
+                            </li>
+                            <li id="cat1411"><a href="https://www.xiachufang.com/category/1411/" target="_blank">蛏子</a>
+                            </li>
+                            <li id="cat1476"><a href="https://www.xiachufang.com/category/1476/" target="_blank">鲜贝</a>
+                            </li>
+                            <li id="cat4126"><a href="https://www.xiachufang.com/category/4126/" target="_blank">北极贝</a>
+                            </li>
+                            <li id="cat4556"><a href="https://www.xiachufang.com/category/4556/" target="_blank">河蚌</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat1183">
+                        <a href="https://www.xiachufang.com/category/1183/" target="_blank">螃蟹</a>
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat953"><a href="https://www.xiachufang.com/category/953/" target="_blank">梭子蟹</a>
+                            </li>
+                            <li id="cat478"><a href="https://www.xiachufang.com/category/478/" target="_blank">大闸蟹</a>
+                            </li>
+                            <li id="cat515"><a href="https://www.xiachufang.com/category/515/" target="_blank">蟹肉</a>
+                            </li>
+                            <li id="cat649"><a href="https://www.xiachufang.com/category/649/" target="_blank">蟹黄</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2483">
+                        其他水产
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat4618">蛋奶豆制品</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            蛋类
+                            <!--span>（18462）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/394/" target="_blank">鸡蛋</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/441/" target="_blank">咸蛋</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/689/" target="_blank">皮蛋</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5343/" target="_blank">咸蛋黄</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/292/" target="_blank">鹌鹑蛋</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5385/" target="_blank">土鸡蛋</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            奶制品
+                            <!--span>（18374）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/2316/" target="_blank">牛奶</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1871/" target="_blank">黄油</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1031/" target="_blank">巧克力</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5296/" target="_blank">奶油</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/2300/" target="_blank">奶酪</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/2125/" target="_blank">酸奶</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            豆制品
+                            <!--span>（6452）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/80/" target="_blank">豆腐</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1405/" target="_blank">香干</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/177/" target="_blank">豆渣</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/730/" target="_blank">千张</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1296/" target="_blank">北豆腐</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/947/" target="_blank">腐竹</a>
+                        </li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat2480">
+                        蛋类
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat394"><a href="https://www.xiachufang.com/category/394/" target="_blank">鸡蛋</a>
+                            </li>
+                            <li id="cat441"><a href="https://www.xiachufang.com/category/441/" target="_blank">咸蛋</a>
+                            </li>
+                            <li id="cat689"><a href="https://www.xiachufang.com/category/689/" target="_blank">皮蛋</a>
+                            </li>
+                            <li id="cat292"><a href="https://www.xiachufang.com/category/292/" target="_blank">鹌鹑蛋</a>
+                            </li>
+                            <li id="cat4389"><a href="https://www.xiachufang.com/category/4389/" target="_blank">鸭蛋</a>
+                            </li>
+                            <li id="cat1007600"><a href="https://www.xiachufang.com/category/1007600/" target="_blank">咸鸭蛋</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat4631">
+                        奶制品
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat2316"><a href="https://www.xiachufang.com/category/2316/" target="_blank">牛奶</a>
+                            </li>
+                            <li id="cat1871"><a href="https://www.xiachufang.com/category/1871/" target="_blank">黄油</a>
+                            </li>
+                            <li id="cat1031"><a href="https://www.xiachufang.com/category/1031/" target="_blank">巧克力</a>
+                            </li>
+                            <li id="cat5296"><a href="https://www.xiachufang.com/category/5296/" target="_blank">奶油</a>
+                            </li>
+                            <li id="cat2300"><a href="https://www.xiachufang.com/category/2300/" target="_blank">奶酪</a>
+                            </li>
+                            <li id="cat2125"><a href="https://www.xiachufang.com/category/2125/" target="_blank">酸奶</a>
+                            </li>
+                            <li id="cat1068"><a href="https://www.xiachufang.com/category/1068/" target="_blank">黑巧克力</a>
+                            </li>
+                            <li id="cat2138"><a href="https://www.xiachufang.com/category/2138/" target="_blank">淡奶油</a>
+                            </li>
+                            <li id="cat2248"><a href="https://www.xiachufang.com/category/2248/" target="_blank">奶油奶酪</a>
+                            </li>
+                            <li id="cat1645"><a href="https://www.xiachufang.com/category/1645/" target="_blank">炼乳</a>
+                            </li>
+                            <li id="cat1520"><a href="https://www.xiachufang.com/category/1520/" target="_blank">奶粉</a>
+                            </li>
+                            <li id="cat2246"><a href="https://www.xiachufang.com/category/2246/" target="_blank">马苏里拉奶酪</a>
+                            </li>
+                            <li id="cat297"><a href="https://www.xiachufang.com/category/297/" target="_blank">白巧克力</a>
+                            </li>
+                            <li id="cat1908"><a href="https://www.xiachufang.com/category/1908/" target="_blank">酸奶油</a>
+                            </li>
+                            <li id="cat4632"><a href="https://www.xiachufang.com/category/4632/" target="_blank">酥油</a>
+                            </li>
+                            <li id="cat1007873"><a href="https://www.xiachufang.com/category/1007873/" target="_blank">芝士</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2487">
+                        豆制品
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat80"><a href="https://www.xiachufang.com/category/80/" target="_blank">豆腐</a>
+                            </li>
+                            <li id="cat1405"><a href="https://www.xiachufang.com/category/1405/" target="_blank">香干</a>
+                            </li>
+                            <li id="cat177"><a href="https://www.xiachufang.com/category/177/" target="_blank">豆渣</a>
+                            </li>
+                            <li id="cat730"><a href="https://www.xiachufang.com/category/730/" target="_blank">千张</a>
+                            </li>
+                            <li id="cat947"><a href="https://www.xiachufang.com/category/947/" target="_blank">腐竹</a>
+                            </li>
+                            <li id="cat315"><a href="https://www.xiachufang.com/category/315/" target="_blank">素鸡</a>
+                            </li>
+                            <li id="cat5446"><a href="https://www.xiachufang.com/category/5446/" target="_blank">油豆皮</a>
+                            </li>
+                            <li id="cat1005208"><a href="https://www.xiachufang.com/category/1005208/" target="_blank">豆干</a>
+                            </li>
+                            <li id="cat1000426"><a href="https://www.xiachufang.com/category/1000426/" target="_blank">豆腐皮</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+            
+            <div class="cates-list clearfix has-bottom-border pb20 mb20">
+                <div class="cates-list-info ml15 float-left">
+                    <h3 class="font20 m0" id="cat4617">米面干果腌咸</h3>
+                </div>
+
+                <div class="cates-list-mini clearfix  hidden">
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            米面类
+                            <!--span>（31841）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/727/" target="_blank">面粉</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1025/" target="_blank">面条</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/743/" target="_blank">大米</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/700/" target="_blank">高筋面粉</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/559/" target="_blank">意大利面</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/846/" target="_blank">糯米</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            干果类
+                            <!--span>（20854）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1807/" target="_blank">芝麻</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1065/" target="_blank">花生</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/300/" target="_blank">杏仁</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/234/" target="_blank">红豆</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5334/" target="_blank">白芝麻</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5344/" target="_blank">黑芝麻</a>
+                        </li>
+                    </ul>
+                    <ul class="cates-border-none">
+                        <li class="cates-list-first clearfix">
+                            腌咸制品
+                            <!--span>（12598）</span-->
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/671/" target="_blank">火腿</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/324/" target="_blank">香肠</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1437/" target="_blank">培根</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/5305/" target="_blank">火腿肠</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/997/" target="_blank">腊肉</a>
+                        </li>
+                        <li><a href="https://www.xiachufang.com/category/1150/" target="_blank">酸菜</a>
+                        </li>
+                    </ul>
+                    <div class="cates-list-more clearfix"><em class="cates-close-em">&nbsp;</em><a href="javascript:;" class="close">展开全部</a></div>
+                </div>
+
+                <div class="cates-list-all clearfix">
+                    <h4 class="font16" id="cat2492">
+                        米面类
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat727"><a href="https://www.xiachufang.com/category/727/" target="_blank">面粉</a>
+                            </li>
+                            <li id="cat1025"><a href="https://www.xiachufang.com/category/1025/" target="_blank">面条</a>
+                            </li>
+                            <li id="cat743"><a href="https://www.xiachufang.com/category/743/" target="_blank">大米</a>
+                            </li>
+                            <li id="cat700"><a href="https://www.xiachufang.com/category/700/" target="_blank">高筋面粉</a>
+                            </li>
+                            <li id="cat559"><a href="https://www.xiachufang.com/category/559/" target="_blank">意大利面</a>
+                            </li>
+                            <li id="cat846"><a href="https://www.xiachufang.com/category/846/" target="_blank">糯米</a>
+                            </li>
+                            <li id="cat1282"><a href="https://www.xiachufang.com/category/1282/" target="_blank">低筋面粉</a>
+                            </li>
+                            <li id="cat1022"><a href="https://www.xiachufang.com/category/1022/" target="_blank">年糕</a>
+                            </li>
+                            <li id="cat1376"><a href="https://www.xiachufang.com/category/1376/" target="_blank">西米</a>
+                            </li>
+                            <li id="cat2238"><a href="https://www.xiachufang.com/category/2238/" target="_blank">糯米粉</a>
+                            </li>
+                            <li id="cat648"><a href="https://www.xiachufang.com/category/648/" target="_blank">粉丝</a>
+                            </li>
+                            <li id="cat370"><a href="https://www.xiachufang.com/category/370/" target="_blank">燕麦</a>
+                            </li>
+                            <li id="cat35"><a href="https://www.xiachufang.com/category/35/" target="_blank">米粉</a>
+                            </li>
+                            <li id="cat1780"><a href="https://www.xiachufang.com/category/1780/" target="_blank">酒酿</a>
+                            </li>
+                            <li id="cat400"><a href="https://www.xiachufang.com/category/400/" target="_blank">燕麦片</a>
+                            </li>
+                            <li id="cat4159"><a href="https://www.xiachufang.com/category/4159/" target="_blank">乌冬面</a>
+                            </li>
+                            <li id="cat3080"><a href="https://www.xiachufang.com/category/3080/" target="_blank">小米</a>
+                            </li>
+                            <li id="cat1090"><a href="https://www.xiachufang.com/category/1090/" target="_blank">玉米面</a>
+                            </li>
+                            <li id="cat497"><a href="https://www.xiachufang.com/category/497/" target="_blank">全麦粉</a>
+                            </li>
+                            <li id="cat350"><a href="https://www.xiachufang.com/category/350/" target="_blank">黑米</a>
+                            </li>
+                            <li id="cat117"><a href="https://www.xiachufang.com/category/117/" target="_blank">魔芋</a>
+                            </li>
+                            <li id="cat4102"><a href="https://www.xiachufang.com/category/4102/" target="_blank">方便面</a>
+                            </li>
+                            <li id="cat1283"><a href="https://www.xiachufang.com/category/1283/" target="_blank">粉条</a>
+                            </li>
+                            <li id="cat657"><a href="https://www.xiachufang.com/category/657/" target="_blank">米线</a>
+                            </li>
+                            <li id="cat854"><a href="https://www.xiachufang.com/category/854/" target="_blank">荞麦面</a>
+                            </li>
+                            <li id="cat498"><a href="https://www.xiachufang.com/category/498/" target="_blank">油条</a>
+                            </li>
+                            <li id="cat2807"><a href="https://www.xiachufang.com/category/2807/" target="_blank">黄豆面</a>
+                            </li>
+                            <li id="cat816"><a href="https://www.xiachufang.com/category/816/" target="_blank">消化饼干</a>
+                            </li>
+                            <li id="cat33"><a href="https://www.xiachufang.com/category/33/" target="_blank">面筋</a>
+                            </li>
+                            <li id="cat197"><a href="https://www.xiachufang.com/category/197/" target="_blank">粘米粉</a>
+                            </li>
+                            <li id="cat129"><a href="https://www.xiachufang.com/category/129/" target="_blank">凉粉</a>
+                            </li>
+                            <li id="cat1485"><a href="https://www.xiachufang.com/category/1485/" target="_blank">糙米</a>
+                            </li>
+                            <li id="cat4020"><a href="https://www.xiachufang.com/category/4020/" target="_blank">河粉</a>
+                            </li>
+                            <li id="cat90"><a href="https://www.xiachufang.com/category/90/" target="_blank">紫米</a>
+                            </li>
+                            <li id="cat2885"><a href="https://www.xiachufang.com/category/2885/" target="_blank">烤麸</a>
+                            </li>
+                            <li id="cat1162"><a href="https://www.xiachufang.com/category/1162/" target="_blank">小麦胚芽</a>
+                            </li>
+                            <li id="cat4450"><a href="https://www.xiachufang.com/category/4450/" target="_blank">澄面</a>
+                            </li>
+                            <li id="cat7"><a href="https://www.xiachufang.com/category/7/" target="_blank">粉皮</a>
+                            </li>
+                            <li id="cat2549"><a href="https://www.xiachufang.com/category/2549/" target="_blank">蕨根粉</a>
+                            </li>
+                            <li id="cat3172"><a href="https://www.xiachufang.com/category/3172/" target="_blank">藕粉</a>
+                            </li>
+                            <li id="cat1203"><a href="https://www.xiachufang.com/category/1203/" target="_blank">红曲米</a>
+                            </li>
+                            <li id="cat3129"><a href="https://www.xiachufang.com/category/3129/" target="_blank">莜面</a>
+                            </li>
+                            <li id="cat45"><a href="https://www.xiachufang.com/category/45/" target="_blank">黄米</a>
+                            </li>
+                            <li id="cat989"><a href="https://www.xiachufang.com/category/989/" target="_blank">荞麦</a>
+                            </li>
+                            <li id="cat4582"><a href="https://www.xiachufang.com/category/4582/" target="_blank">大麦</a>
+                            </li>
+                            <li id="cat3983"><a href="https://www.xiachufang.com/category/3983/" target="_blank">高粱米</a>
+                            </li>
+                            <li id="cat1012576"><a href="https://www.xiachufang.com/category/1012576/" target="_blank">红米</a>
+                            </li>
+                            <li id="cat1012512"><a href="https://www.xiachufang.com/category/1012512/" target="_blank">澄粉</a>
+                            </li>
+                            <li id="cat1011237"><a href="https://www.xiachufang.com/category/1011237/" target="_blank">黄豆粉</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2491">
+                        干果类
+                    </h4>
+                    <ul class=" has-bottom-border">
+                            <li id="cat1807"><a href="https://www.xiachufang.com/category/1807/" target="_blank">芝麻</a>
+                            </li>
+                            <li id="cat1065"><a href="https://www.xiachufang.com/category/1065/" target="_blank">花生</a>
+                            </li>
+                            <li id="cat300"><a href="https://www.xiachufang.com/category/300/" target="_blank">杏仁</a>
+                            </li>
+                            <li id="cat234"><a href="https://www.xiachufang.com/category/234/" target="_blank">红豆</a>
+                            </li>
+                            <li id="cat2313"><a href="https://www.xiachufang.com/category/2313/" target="_blank">枣</a>
+                            </li>
+                            <li id="cat1419"><a href="https://www.xiachufang.com/category/1419/" target="_blank">核桃</a>
+                            </li>
+                            <li id="cat235"><a href="https://www.xiachufang.com/category/235/" target="_blank">板栗</a>
+                            </li>
+                            <li id="cat688"><a href="https://www.xiachufang.com/category/688/" target="_blank">蔓越莓</a>
+                            </li>
+                            <li id="cat98"><a href="https://www.xiachufang.com/category/98/" target="_blank">绿豆</a>
+                            </li>
+                            <li id="cat280"><a href="https://www.xiachufang.com/category/280/" target="_blank">黄豆</a>
+                            </li>
+                            <li id="cat1141"><a href="https://www.xiachufang.com/category/1141/" target="_blank">薏米</a>
+                            </li>
+                            <li id="cat1757"><a href="https://www.xiachufang.com/category/1757/" target="_blank">葡萄干</a>
+                            </li>
+                            <li id="cat1020"><a href="https://www.xiachufang.com/category/1020/" target="_blank">莲子</a>
+                            </li>
+                            <li id="cat4139"><a href="https://www.xiachufang.com/category/4139/" target="_blank">橄榄</a>
+                            </li>
+                            <li id="cat134"><a href="https://www.xiachufang.com/category/134/" target="_blank">黑豆</a>
+                            </li>
+                            <li id="cat4634"><a href="https://www.xiachufang.com/category/4634/" target="_blank">蜜豆</a>
+                            </li>
+                            <li id="cat348"><a href="https://www.xiachufang.com/category/348/" target="_blank">芸豆</a>
+                            </li>
+                            <li id="cat769"><a href="https://www.xiachufang.com/category/769/" target="_blank">腰果</a>
+                            </li>
+                            <li id="cat3222"><a href="https://www.xiachufang.com/category/3222/" target="_blank">桃胶</a>
+                            </li>
+                            <li id="cat1853"><a href="https://www.xiachufang.com/category/1853/" target="_blank">乌梅</a>
+                            </li>
+                            <li id="cat8"><a href="https://www.xiachufang.com/category/8/" target="_blank">松仁</a>
+                            </li>
+                            <li id="cat3109"><a href="https://www.xiachufang.com/category/3109/" target="_blank">无花果</a>
+                            </li>
+                            <li id="cat598"><a href="https://www.xiachufang.com/category/598/" target="_blank">银杏果</a>
+                            </li>
+                            <li id="cat2291"><a href="https://www.xiachufang.com/category/2291/" target="_blank">话梅</a>
+                            </li>
+                            <li id="cat474"><a href="https://www.xiachufang.com/category/474/" target="_blank">榛子</a>
+                            </li>
+                            <li id="cat5159"><a href="https://www.xiachufang.com/category/5159/" target="_blank">鹰嘴豆</a>
+                            </li>
+                            <li id="cat4437"><a href="https://www.xiachufang.com/category/4437/" target="_blank">罗汉果</a>
+                            </li>
+                            <li id="cat1657"><a href="https://www.xiachufang.com/category/1657/" target="_blank">芡实</a>
+                            </li>
+                            <li id="cat2986"><a href="https://www.xiachufang.com/category/2986/" target="_blank">开心果</a>
+                            </li>
+                            <li id="cat4221"><a href="https://www.xiachufang.com/category/4221/" target="_blank">干山楂</a>
+                            </li>
+                            <li id="cat5160"><a href="https://www.xiachufang.com/category/5160/" target="_blank">南瓜子</a>
+                            </li>
+                            <li id="cat3271"><a href="https://www.xiachufang.com/category/3271/" target="_blank">瓜子仁</a>
+                            </li>
+                            <li id="cat1334"><a href="https://www.xiachufang.com/category/1334/" target="_blank">眉豆</a>
+                            </li>
+                            <li id="cat3292"><a href="https://www.xiachufang.com/category/3292/" target="_blank">红腰豆</a>
+                            </li>
+                            <li id="cat1012410"><a href="https://www.xiachufang.com/category/1012410/" target="_blank">松子</a>
+                            </li>
+                            <li id="cat1012413"><a href="https://www.xiachufang.com/category/1012413/" target="_blank">山楂干</a>
+                            </li>
+                            <li id="cat1005848"><a href="https://www.xiachufang.com/category/1005848/" target="_blank">白果</a>
+                            </li>
+                    </ul>
+                    <h4 class="font16" id="cat2489">
+                        腌咸制品
+                    </h4>
+                    <ul class="cates-border-none has-bottom-border">
+                            <li id="cat671"><a href="https://www.xiachufang.com/category/671/" target="_blank">火腿</a>
+                            </li>
+                            <li id="cat324"><a href="https://www.xiachufang.com/category/324/" target="_blank">香肠</a>
+                            </li>
+                            <li id="cat1437"><a href="https://www.xiachufang.com/category/1437/" target="_blank">培根</a>
+                            </li>
+                            <li id="cat997"><a href="https://www.xiachufang.com/category/997/" target="_blank">腊肉</a>
+                            </li>
+                            <li id="cat1150"><a href="https://www.xiachufang.com/category/1150/" target="_blank">酸菜</a>
+                            </li>
+                            <li id="cat653"><a href="https://www.xiachufang.com/category/653/" target="_blank">泡菜</a>
+                            </li>
+                            <li id="cat975"><a href="https://www.xiachufang.com/category/975/" target="_blank">肉松</a>
+                            </li>
+                            <li id="cat658"><a href="https://www.xiachufang.com/category/658/" target="_blank">梅干菜</a>
+                            </li>
+                            <li id="cat431"><a href="https://www.xiachufang.com/category/431/" target="_blank">雪里蕻</a>
+                            </li>
+                            <li id="cat940"><a href="https://www.xiachufang.com/category/940/" target="_blank">榨菜</a>
+                            </li>
+                            <li id="cat1049"><a href="https://www.xiachufang.com/category/1049/" target="_blank">辣白菜</a>
+                            </li>
+                            <li id="cat1415"><a href="https://www.xiachufang.com/category/1415/" target="_blank">笋干</a>
+                            </li>
+                            <li id="cat1463"><a href="https://www.xiachufang.com/category/1463/" target="_blank">鱼丸</a>
+                            </li>
+                            <li id="cat1356"><a href="https://www.xiachufang.com/category/1356/" target="_blank">橄榄菜</a>
+                            </li>
+                            <li id="cat1338"><a href="https://www.xiachufang.com/category/1338/" target="_blank">咸菜</a>
+                            </li>
+                            <li id="cat838"><a href="https://www.xiachufang.com/category/838/" target="_blank">萝卜干</a>
+                            </li>
+                            <li id="cat1252"><a href="https://www.xiachufang.com/category/1252/" target="_blank">咸肉</a>
+                            </li>
+                            <li id="cat586"><a href="https://www.xiachufang.com/category/586/" target="_blank">酸豇豆</a>
+                            </li>
+                            <li id="cat3035"><a href="https://www.xiachufang.com/category/3035/" target="_blank">肉丸</a>
+                            </li>
+                            <li id="cat4444"><a href="https://www.xiachufang.com/category/4444/" target="_blank">午餐肉</a>
+                            </li>
+                            <li id="cat402"><a href="https://www.xiachufang.com/category/402/" target="_blank">蟹棒</a>
+                            </li>
+                            <li id="cat545"><a href="https://www.xiachufang.com/category/545/" target="_blank">叉烧肉</a>
+                            </li>
+                            <li id="cat285"><a href="https://www.xiachufang.com/category/285/" target="_blank">芽菜</a>
+                            </li>
+                            <li id="cat3196"><a href="https://www.xiachufang.com/category/3196/" target="_blank">纳豆</a>
+                            </li>
+                            <li id="cat1238"><a href="https://www.xiachufang.com/category/1238/" target="_blank">大头菜</a>
+                            </li>
+                            <li id="cat903"><a href="https://www.xiachufang.com/category/903/" target="_blank">酸笋</a>
+                            </li>
+                            <li id="cat4404"><a href="https://www.xiachufang.com/category/4404/" target="_blank">木鱼花</a>
+                            </li>
+                            <li id="cat391"><a href="https://www.xiachufang.com/category/391/" target="_blank">冬菜</a>
+                            </li>
+                            <li id="cat93"><a href="https://www.xiachufang.com/category/93/" target="_blank">玉兰片</a>
+                            </li>
+                            <li id="cat882"><a href="https://www.xiachufang.com/category/882/" target="_blank">泡萝卜</a>
+                            </li>
+                            <li id="cat3094"><a href="https://www.xiachufang.com/category/3094/" target="_blank">咸黄瓜</a>
+                            </li>
+                            <li id="cat1011415"><a href="https://www.xiachufang.com/category/1011415/" target="_blank">叉烧</a>
+                            </li>
+                            <li id="cat1007639"><a href="https://www.xiachufang.com/category/1007639/" target="_blank">酸豆角</a>
+                            </li>
+                    </ul>
+                    <div class="cates-list-more clearfix pt10"><em class="cates-open-em">&nbsp;</em><a href="javascript:;" class="open">收起</a></div>
+                </div>
+            </div>
+	</div>
+    
+</div>
+
+  </div>
+  <!-- end of page-container -->
+</div>
+
+
+
+
+
+
+
+
+  
+  <script src="./category_files/1e27811f613082e388e5.js"></script>
+  
+
+<script src="./category_files/a888952d189f31bb9ccb.js"></script><img id="scrollTop" src="./category_files/scroll_top.png" style="opacity: 1; position: fixed; width: 50px; height: auto; z-index: 20; border: 0px; padding: 0px; bottom: 20px; right: 20px; margin: 0px; cursor: pointer; display: block;">
+
+<div id="color_timer"></div>
+
+
+
+
+
+
+</body></html>
