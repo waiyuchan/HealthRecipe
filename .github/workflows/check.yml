@@ -1,0 +1,19 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: uv sync --frozen --dev
+      - run: uv run ruff check src scripts tests
+      - run: uv run pytest -q
+      - run: node --check web/app.js && node --check web/companion.js && node --check web/quick.js
