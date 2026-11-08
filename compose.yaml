@@ -1,0 +1,17 @@
+services:
+  healthrecipe:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      TZ: Asia/Shanghai
+      HEALTHRECIPE_DB: /app/data/healthrecipe.db
+      HEALTHRECIPE_LLM_PROVIDER: ${HEALTHRECIPE_LLM_PROVIDER:-custom}
+      HEALTHRECIPE_LLM_BASE_URL: ${HEALTHRECIPE_LLM_BASE_URL:-}
+      HEALTHRECIPE_LLM_MODEL: ${HEALTHRECIPE_LLM_MODEL:-}
+      HEALTHRECIPE_LLM_API_KEY: ${HEALTHRECIPE_LLM_API_KEY:-}
+    volumes:
+      - recipe-data:/app/data
+    restart: unless-stopped
+volumes:
+  recipe-data:

@@ -1,0 +1,525 @@
+{
+  "source": "USDA FoodData Central SR Legacy (2018)",
+  "source_url": "https://fdc.nal.usda.gov/download-datasets/",
+  "basis": "per 100 g edible portion; preparation state follows each original description",
+  "foods": [
+    {
+      "name": "香油",
+      "aliases": [],
+      "fdc_id": 171016,
+      "description": "Oil, sesame, salad or cooking",
+      "kcal": 884.0,
+      "protein": 0.0,
+      "fat": 100.0,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/171016/nutrients"
+    },
+    {
+      "name": "熟米饭",
+      "aliases": [],
+      "fdc_id": 168878,
+      "description": "Rice, white, long-grain, regular, enriched, cooked",
+      "kcal": 130.0,
+      "protein": 2.69,
+      "fat": 0.28,
+      "carbs": 28.17,
+      "approximation": "使用熟白米饭数据，不适用于干米",
+      "source_url": "https://fdc.nal.usda.gov/food-details/168878/nutrients"
+    },
+    {
+      "name": "土豆",
+      "aliases": [
+        "马铃薯"
+      ],
+      "fdc_id": 170026,
+      "description": "Potatoes, flesh and skin, raw",
+      "kcal": 77.0,
+      "protein": 2.05,
+      "fat": 0.09,
+      "carbs": 17.49,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170026/nutrients"
+    },
+    {
+      "name": "番茄",
+      "aliases": [
+        "西红柿"
+      ],
+      "fdc_id": 170457,
+      "description": "Tomatoes, red, ripe, raw, year round average",
+      "kcal": 18.0,
+      "protein": 0.88,
+      "fat": 0.2,
+      "carbs": 3.89,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170457/nutrients"
+    },
+    {
+      "name": "鸡蛋",
+      "aliases": [],
+      "fdc_id": 171287,
+      "description": "Egg, whole, raw, fresh",
+      "kcal": 143.0,
+      "protein": 12.56,
+      "fat": 9.51,
+      "carbs": 0.72,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/171287/nutrients"
+    },
+    {
+      "name": "老豆腐",
+      "aliases": [
+        "豆腐"
+      ],
+      "fdc_id": 172475,
+      "description": "Tofu, raw, firm, prepared with calcium sulfate",
+      "kcal": 144.0,
+      "protein": 17.27,
+      "fat": 8.72,
+      "carbs": 2.78,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/172475/nutrients"
+    },
+    {
+      "name": "嫩豆腐",
+      "aliases": [],
+      "fdc_id": 172476,
+      "description": "Tofu, raw, regular, prepared with calcium sulfate",
+      "kcal": 76.0,
+      "protein": 8.08,
+      "fat": 4.78,
+      "carbs": 1.87,
+      "approximation": "以普通豆腐近似，嫩豆腐品牌含水量不同",
+      "source_url": "https://fdc.nal.usda.gov/food-details/172476/nutrients"
+    },
+    {
+      "name": "香干",
+      "aliases": [],
+      "fdc_id": 172475,
+      "description": "Tofu, raw, firm, prepared with calcium sulfate",
+      "kcal": 144.0,
+      "protein": 17.27,
+      "fat": 8.72,
+      "carbs": 2.78,
+      "approximation": "以硬豆腐近似，香干应优先使用包装热量",
+      "source_url": "https://fdc.nal.usda.gov/food-details/172475/nutrients"
+    },
+    {
+      "name": "香菇",
+      "aliases": [],
+      "fdc_id": 169242,
+      "description": "Mushrooms, shiitake, raw",
+      "kcal": 34.0,
+      "protein": 2.24,
+      "fat": 0.49,
+      "carbs": 6.79,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169242/nutrients"
+    },
+    {
+      "name": "西兰花",
+      "aliases": [
+        "西蓝花"
+      ],
+      "fdc_id": 170379,
+      "description": "Broccoli, raw",
+      "kcal": 34.0,
+      "protein": 2.82,
+      "fat": 0.37,
+      "carbs": 6.64,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170379/nutrients"
+    },
+    {
+      "name": "虾仁",
+      "aliases": [
+        "虾"
+      ],
+      "fdc_id": 175179,
+      "description": "Crustaceans, shrimp, raw",
+      "kcal": 85.0,
+      "protein": 20.1,
+      "fat": 0.51,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/175179/nutrients"
+    },
+    {
+      "name": "鸡胸肉",
+      "aliases": [],
+      "fdc_id": 171077,
+      "description": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",
+      "kcal": 120.0,
+      "protein": 22.5,
+      "fat": 2.62,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/171077/nutrients"
+    },
+    {
+      "name": "鸡腿肉",
+      "aliases": [],
+      "fdc_id": 173627,
+      "description": "Chicken, broilers or fryers, dark meat, thigh, meat only, raw",
+      "kcal": 121.0,
+      "protein": 19.66,
+      "fat": 4.12,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/173627/nutrients"
+    },
+    {
+      "name": "南瓜",
+      "aliases": [],
+      "fdc_id": 168448,
+      "description": "Pumpkin, raw",
+      "kcal": 26.0,
+      "protein": 1.0,
+      "fat": 0.1,
+      "carbs": 6.5,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168448/nutrients"
+    },
+    {
+      "name": "小米",
+      "aliases": [],
+      "fdc_id": 169702,
+      "description": "Millet, raw",
+      "kcal": 378.0,
+      "protein": 11.02,
+      "fat": 4.22,
+      "carbs": 72.85,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169702/nutrients"
+    },
+    {
+      "name": "黄瓜",
+      "aliases": [],
+      "fdc_id": 168409,
+      "description": "Cucumber, with peel, raw",
+      "kcal": 15.0,
+      "protein": 0.65,
+      "fat": 0.11,
+      "carbs": 3.63,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168409/nutrients"
+    },
+    {
+      "name": "干木耳",
+      "aliases": [],
+      "fdc_id": 168581,
+      "description": "Fungi, Cloud ears, dried",
+      "kcal": 284.0,
+      "protein": 9.25,
+      "fat": 0.73,
+      "carbs": 73.01,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168581/nutrients"
+    },
+    {
+      "name": "白萝卜",
+      "aliases": [],
+      "fdc_id": 168451,
+      "description": "Radishes, oriental, raw",
+      "kcal": 18.0,
+      "protein": 0.6,
+      "fat": 0.1,
+      "carbs": 4.1,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168451/nutrients"
+    },
+    {
+      "name": "菠菜",
+      "aliases": [],
+      "fdc_id": 168462,
+      "description": "Spinach, raw",
+      "kcal": 23.0,
+      "protein": 2.86,
+      "fat": 0.39,
+      "carbs": 3.63,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168462/nutrients"
+    },
+    {
+      "name": "面条",
+      "aliases": [],
+      "fdc_id": 169755,
+      "description": "Noodles, egg, dry, unenriched",
+      "kcal": 384.0,
+      "protein": 14.16,
+      "fat": 4.44,
+      "carbs": 71.27,
+      "approximation": "以干蛋面近似，鲜面需确认包装营养与含水量",
+      "source_url": "https://fdc.nal.usda.gov/food-details/169755/nutrients"
+    },
+    {
+      "name": "芹菜",
+      "aliases": [],
+      "fdc_id": 169988,
+      "description": "Celery, raw",
+      "kcal": 14.0,
+      "protein": 0.69,
+      "fat": 0.17,
+      "carbs": 2.97,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169988/nutrients"
+    },
+    {
+      "name": "玉米",
+      "aliases": [],
+      "fdc_id": 169998,
+      "description": "Corn, sweet, yellow, raw",
+      "kcal": 86.0,
+      "protein": 3.27,
+      "fat": 1.35,
+      "carbs": 18.7,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169998/nutrients"
+    },
+    {
+      "name": "胡萝卜",
+      "aliases": [],
+      "fdc_id": 170393,
+      "description": "Carrots, raw",
+      "kcal": 41.0,
+      "protein": 0.93,
+      "fat": 0.24,
+      "carbs": 9.58,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170393/nutrients"
+    },
+    {
+      "name": "红薯",
+      "aliases": [],
+      "fdc_id": 168482,
+      "description": "Sweet potato, raw, unprepared (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 86.0,
+      "protein": 1.57,
+      "fat": 0.05,
+      "carbs": 20.12,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168482/nutrients"
+    },
+    {
+      "name": "即食燕麦",
+      "aliases": [
+        "燕麦"
+      ],
+      "fdc_id": 169705,
+      "description": "Oats (Includes foods for USDA's Food Distribution Program)",
+      "kcal": 389.0,
+      "protein": 16.89,
+      "fat": 6.9,
+      "carbs": 66.27,
+      "approximation": "以干燕麦近似",
+      "source_url": "https://fdc.nal.usda.gov/food-details/169705/nutrients"
+    },
+    {
+      "name": "牛奶",
+      "aliases": [],
+      "fdc_id": 171265,
+      "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+      "kcal": 61.0,
+      "protein": 3.15,
+      "fat": 3.25,
+      "carbs": 4.8,
+      "approximation": "按全脂牛奶计算，具体品牌以包装为准",
+      "source_url": "https://fdc.nal.usda.gov/food-details/171265/nutrients"
+    },
+    {
+      "name": "彩椒",
+      "aliases": [
+        "红椒",
+        "甜椒"
+      ],
+      "fdc_id": 170108,
+      "description": "Peppers, sweet, red, raw",
+      "kcal": 26.0,
+      "protein": 0.99,
+      "fat": 0.3,
+      "carbs": 6.03,
+      "approximation": "以生红甜椒近似混合彩椒",
+      "source_url": "https://fdc.nal.usda.gov/food-details/170108/nutrients"
+    },
+    {
+      "name": "大蒜",
+      "aliases": [],
+      "fdc_id": 169230,
+      "description": "Garlic, raw",
+      "kcal": 149.0,
+      "protein": 6.36,
+      "fat": 0.5,
+      "carbs": 33.06,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169230/nutrients"
+    },
+    {
+      "name": "生姜",
+      "aliases": [
+        "姜"
+      ],
+      "fdc_id": 169231,
+      "description": "Ginger root, raw",
+      "kcal": 80.0,
+      "protein": 1.82,
+      "fat": 0.75,
+      "carbs": 17.77,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169231/nutrients"
+    },
+    {
+      "name": "小葱",
+      "aliases": [
+        "葱"
+      ],
+      "fdc_id": 170005,
+      "description": "Onions, spring or scallions (includes tops and bulb), raw",
+      "kcal": 32.0,
+      "protein": 1.83,
+      "fat": 0.19,
+      "carbs": 7.34,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170005/nutrients"
+    },
+    {
+      "name": "食用油",
+      "aliases": [
+        "植物油"
+      ],
+      "fdc_id": 171411,
+      "description": "Oil, soybean, salad or cooking",
+      "kcal": 884.0,
+      "protein": 0.0,
+      "fat": 100.0,
+      "carbs": 0.0,
+      "approximation": "按大豆烹调油计算，全量计入，未扣除锅中余油",
+      "source_url": "https://fdc.nal.usda.gov/food-details/171411/nutrients"
+    },
+    {
+      "name": "生抽",
+      "aliases": [
+        "酱油",
+        "蒸鱼豉油"
+      ],
+      "fdc_id": 174277,
+      "description": "Soy sauce made from soy and wheat (shoyu)",
+      "kcal": 53.0,
+      "protein": 8.14,
+      "fat": 0.57,
+      "carbs": 4.93,
+      "approximation": "以普通酱油近似，具体品牌以包装为准",
+      "source_url": "https://fdc.nal.usda.gov/food-details/174277/nutrients"
+    },
+    {
+      "name": "莲藕",
+      "aliases": [],
+      "fdc_id": 169250,
+      "description": "Lotus root, raw",
+      "kcal": 74.0,
+      "protein": 2.6,
+      "fat": 0.1,
+      "carbs": 17.23,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169250/nutrients"
+    },
+    {
+      "name": "荷兰豆",
+      "aliases": [],
+      "fdc_id": 170010,
+      "description": "Peas, edible-podded, raw",
+      "kcal": 42.0,
+      "protein": 2.8,
+      "fat": 0.2,
+      "carbs": 7.55,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/170010/nutrients"
+    },
+    {
+      "name": "鲈鱼",
+      "aliases": [],
+      "fdc_id": 175142,
+      "description": "Fish, sea bass, mixed species, raw",
+      "kcal": 97.0,
+      "protein": 18.43,
+      "fat": 2.0,
+      "carbs": 0.0,
+      "approximation": "以生海鲈鱼近似",
+      "source_url": "https://fdc.nal.usda.gov/food-details/175142/nutrients"
+    },
+    {
+      "name": "排骨",
+      "aliases": [],
+      "fdc_id": 167853,
+      "description": "Pork, fresh, spareribs, separable lean and fat, raw",
+      "kcal": 277.0,
+      "protein": 15.47,
+      "fat": 23.4,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/167853/nutrients"
+    },
+    {
+      "name": "牛腩",
+      "aliases": [],
+      "fdc_id": 168664,
+      "description": "Beef, brisket, whole, separable lean and fat, trimmed to 1/8\" fat, all grades, raw",
+      "kcal": 253.0,
+      "protein": 18.42,
+      "fat": 19.06,
+      "carbs": 0.56,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/168664/nutrients"
+    },
+    {
+      "name": "香醋",
+      "aliases": [
+        "醋"
+      ],
+      "fdc_id": 172237,
+      "description": "Vinegar, distilled",
+      "kcal": 18.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "carbs": 0.04,
+      "approximation": "以蒸馏醋近似，调味醋含糖量可能不同",
+      "source_url": "https://fdc.nal.usda.gov/food-details/172237/nutrients"
+    },
+    {
+      "name": "盐",
+      "aliases": [],
+      "fdc_id": 173468,
+      "description": "Salt, table",
+      "kcal": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/173468/nutrients"
+    },
+    {
+      "name": "水",
+      "aliases": [],
+      "fdc_id": 173647,
+      "description": "Beverages, water, tap, drinking",
+      "kcal": 0.0,
+      "protein": 0.0,
+      "fat": 0.0,
+      "carbs": 0.0,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/173647/nutrients"
+    },
+    {
+      "name": "淀粉",
+      "aliases": [],
+      "fdc_id": 169698,
+      "description": "Cornstarch",
+      "kcal": 381.0,
+      "protein": 0.26,
+      "fat": 0.05,
+      "carbs": 91.27,
+      "approximation": null,
+      "source_url": "https://fdc.nal.usda.gov/food-details/169698/nutrients"
+    }
+  ]
+}

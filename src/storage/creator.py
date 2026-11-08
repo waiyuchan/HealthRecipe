@@ -1,47 +1,37 @@
-import time
+"""Explicit, rate-limited collection. Importing this module performs no I/O."""
 
-from src.storage.es import ES
+import time
+from pathlib import Path
+
 from src.collection.recipe_extractor import recipe_extractor
+from src.models import Recipe
+from src.storage.sqlite import Store
 
 
 def get_xcf_id_list_from_txt(file_path):
-    """
-    获取下厨房菜谱id列表
-    :param file_path: 文件路径
-    :return: 下厨房菜谱id列表
-    """
-    with open(file_path, "r") as f:
-        lines = f.readlines()
-    return [line.strip() for line in lines]
+    return list(
+        dict.fromkeys(line.strip() for line in Path(file_path).read_text().splitlines() if line.strip())
+    )
 
 
-class Creator(object):
-    """ 菜谱创建器 """
-
-    def __init__(self):
-        self.es = ES()
-        self.re = recipe_extractor
+class Creator:
+    def __init__(self, path="data/healthrecipe.db"):
+        self.store = Store(path)
 
     def extract(self, xcf_id):
-        return self.re(xcf_id)
+        return recipe_extractor(xcf_id)
 
-    def es_insert(self, xcf_id):
-        """
-        单条插入
-        :param xcf_id: 下厨房菜谱id
-        """
-        self.es.insert(menu_item=self.extract(xcf_id))
+    def insert(self, xcf_id):
+        recipe = Recipe.model_validate(self.extract(xcf_id))
+        existing = next((r for r in self.store.recipes() if r.get("xcf_id") == recipe.xcf_id), None)
+        return self.store.save_recipe(recipe, existing["id"] if existing else None)
 
-    def es_batch_insert(self, xcf_id_list):
-        """
-        批量插入
-        :param xcf_id_list: 下厨房菜谱id列表
-        """
-        for xcf_id in xcf_id_list:
-            self.es_insert(xcf_id)
-            time.sleep(2)  # 避免高频访问下厨房网站
-
-
-if __name__ == '__main__':
-    xcf_id_list = get_xcf_id_list_from_txt("../../data/menu.txt")
-    Creator().es_batch_insert(xcf_id_list)
+    def batch_insert(self, xcf_id_list):
+        results = []
+        for xcf_id in dict.fromkeys(xcf_id_list):
+            try:
+                results.append({"xcf_id": xcf_id, "recipe": self.insert(xcf_id)})
+            except (ValueError, OSError) as exc:
+                results.append({"xcf_id": xcf_id, "error": str(exc)})
+            time.sleep(2)
+        return results

@@ -1,8 +1,5 @@
-class RecAlgorithm:
+"""Public entry point for the transparent recommendation algorithm."""
 
-    def __init__(self):
-        pass
+from src.recommendation.recommend import Recommendation
 
-    def collaborative_filtering(self):
-        ''' 协同过滤算法 '''
-        return
+RecAlgorithm = Recommendation

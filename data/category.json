@@ -2,105 +2,569 @@
   "热门专题": {
     "菜式": {
       "url": "",
-      "items": {
-        "name": "创意菜",
-        "url": "https://www.xiachufang.com/category/51940/"
-      }
+      "items": [
+        {
+          "name": "家常菜",
+          "url": "https://www.xiachufang.com/category/40076/"
+        },
+        {
+          "name": "快手菜",
+          "url": "https://www.xiachufang.com/category/40077/"
+        },
+        {
+          "name": "下饭菜",
+          "url": "https://www.xiachufang.com/category/40078/"
+        },
+        {
+          "name": "素菜",
+          "url": "https://www.xiachufang.com/category/51848/"
+        },
+        {
+          "name": "大鱼大肉",
+          "url": "https://www.xiachufang.com/category/52354/"
+        },
+        {
+          "name": "下酒菜",
+          "url": "https://www.xiachufang.com/category/51743/"
+        },
+        {
+          "name": "小清新",
+          "url": "https://www.xiachufang.com/category/52351/"
+        },
+        {
+          "name": "创意菜",
+          "url": "https://www.xiachufang.com/category/51940/"
+        }
+      ]
     },
     "特色食品": {
       "url": "",
-      "items": {
-        "name": "鸡蛋羹",
-        "url": "https://www.xiachufang.com/category/1007463/"
-      }
+      "items": [
+        {
+          "name": "小吃",
+          "url": "https://www.xiachufang.com/category/40073/"
+        },
+        {
+          "name": "酱",
+          "url": "https://www.xiachufang.com/category/51276/"
+        },
+        {
+          "name": "沙拉",
+          "url": "https://www.xiachufang.com/category/20167/"
+        },
+        {
+          "name": "凉菜",
+          "url": "https://www.xiachufang.com/category/20137/"
+        },
+        {
+          "name": "零食",
+          "url": "https://www.xiachufang.com/category/40074/"
+        },
+        {
+          "name": "三明治",
+          "url": "https://www.xiachufang.com/category/20157/"
+        },
+        {
+          "name": "月饼",
+          "url": "https://www.xiachufang.com/category/20152/"
+        },
+        {
+          "name": "蒸蛋",
+          "url": "https://www.xiachufang.com/category/52335/"
+        },
+        {
+          "name": "寿司",
+          "url": "https://www.xiachufang.com/category/20172/"
+        },
+        {
+          "name": "粽子",
+          "url": "https://www.xiachufang.com/category/51870/"
+        },
+        {
+          "name": "鸡蛋羹",
+          "url": "https://www.xiachufang.com/category/1007463/"
+        }
+      ]
     },
     "特殊场合": {
       "url": "",
-      "items": {
-        "name": "宵夜",
-        "url": "https://www.xiachufang.com/category/51865/"
-      }
+      "items": [
+        {
+          "name": "早餐",
+          "url": "https://www.xiachufang.com/category/40071/"
+        },
+        {
+          "name": "下午茶",
+          "url": "https://www.xiachufang.com/category/40072/"
+        },
+        {
+          "name": "便当",
+          "url": "https://www.xiachufang.com/category/20171/"
+        },
+        {
+          "name": "圣诞节",
+          "url": "https://www.xiachufang.com/category/51971/"
+        },
+        {
+          "name": "年夜饭",
+          "url": "https://www.xiachufang.com/category/40075/"
+        },
+        {
+          "name": "深夜食堂",
+          "url": "https://www.xiachufang.com/category/52107/"
+        },
+        {
+          "name": "情人节",
+          "url": "https://www.xiachufang.com/category/51822/"
+        },
+        {
+          "name": "宵夜",
+          "url": "https://www.xiachufang.com/category/51865/"
+        }
+      ]
     },
     "功效": {
       "url": "",
-      "items": {
-        "name": "清热祛火",
-        "url": "https://www.xiachufang.com/category/52334/"
-      }
+      "items": [
+        {
+          "name": "减肥",
+          "url": "https://www.xiachufang.com/category/30048/"
+        },
+        {
+          "name": "美容",
+          "url": "https://www.xiachufang.com/category/52138/"
+        },
+        {
+          "name": "润肺抗燥",
+          "url": "https://www.xiachufang.com/category/30053/"
+        },
+        {
+          "name": "补血",
+          "url": "https://www.xiachufang.com/category/30051/"
+        },
+        {
+          "name": "清热祛火",
+          "url": "https://www.xiachufang.com/category/52334/"
+        }
+      ]
     },
     "人群": {
       "url": "",
-      "items": {
-        "name": "宝宝食谱",
-        "url": "https://www.xiachufang.com/category/1012138/"
-      }
+      "items": [
+        {
+          "name": "儿童",
+          "url": "https://www.xiachufang.com/category/30042/"
+        },
+        {
+          "name": "婴幼儿",
+          "url": "https://www.xiachufang.com/category/30044/"
+        },
+        {
+          "name": "老人",
+          "url": "https://www.xiachufang.com/category/30043/"
+        },
+        {
+          "name": "孕产妇",
+          "url": "https://www.xiachufang.com/category/52333/"
+        },
+        {
+          "name": "宝宝食谱",
+          "url": "https://www.xiachufang.com/category/1012138/"
+        }
+      ]
     },
     "视频专题": {
       "url": "",
-      "items": {
-        "name": "味蕾工坊",
-        "url": "https://www.xiachufang.com/category/52353/"
-      }
+      "items": [
+        {
+          "name": "味蕾工坊",
+          "url": "https://www.xiachufang.com/category/52353/"
+        }
+      ]
     }
   },
   "烘焙甜品饮料": {
     "烘焙": {
       "url": "https://www.xiachufang.com/category/51761/",
-      "items": {
-        "name": "奶油霜",
-        "url": "https://www.xiachufang.com/category/52465/"
-      }
+      "items": [
+        {
+          "name": "蛋糕",
+          "url": "https://www.xiachufang.com/category/20158/"
+        },
+        {
+          "name": "面包",
+          "url": "https://www.xiachufang.com/category/52411/"
+        },
+        {
+          "name": "饼干",
+          "url": "https://www.xiachufang.com/category/20160/"
+        },
+        {
+          "name": "披萨",
+          "url": "https://www.xiachufang.com/category/51916/"
+        },
+        {
+          "name": "派",
+          "url": "https://www.xiachufang.com/category/20164/"
+        },
+        {
+          "name": "司康",
+          "url": "https://www.xiachufang.com/category/52464/"
+        },
+        {
+          "name": "塔",
+          "url": "https://www.xiachufang.com/category/52463/"
+        },
+        {
+          "name": "泡芙",
+          "url": "https://www.xiachufang.com/category/20162/"
+        },
+        {
+          "name": "奶油霜",
+          "url": "https://www.xiachufang.com/category/52465/"
+        }
+      ]
     },
     "甜品": {
       "url": "https://www.xiachufang.com/category/20135/",
-      "items": {
-        "name": "果冻",
-        "url": "https://www.xiachufang.com/category/51871/"
-      }
+      "items": [
+        {
+          "name": "布丁",
+          "url": "https://www.xiachufang.com/category/20163/"
+        },
+        {
+          "name": "冷饮",
+          "url": "https://www.xiachufang.com/category/51867/"
+        },
+        {
+          "name": "果酱",
+          "url": "https://www.xiachufang.com/category/20165/"
+        },
+        {
+          "name": "糖水",
+          "url": "https://www.xiachufang.com/category/50680/"
+        },
+        {
+          "name": "冰淇淋",
+          "url": "https://www.xiachufang.com/category/20166/"
+        },
+        {
+          "name": "果冻",
+          "url": "https://www.xiachufang.com/category/51871/"
+        }
+      ]
     },
     "饮品": {
       "url": "https://www.xiachufang.com/category/20136/",
-      "items": {
-        "name": "花草茶",
-        "url": "https://www.xiachufang.com/category/52332/"
-      }
+      "items": [
+        {
+          "name": "咖啡",
+          "url": "https://www.xiachufang.com/category/20168/"
+        },
+        {
+          "name": "豆浆",
+          "url": "https://www.xiachufang.com/category/52088/"
+        },
+        {
+          "name": "奶茶",
+          "url": "https://www.xiachufang.com/category/20169/"
+        },
+        {
+          "name": "酒",
+          "url": "https://www.xiachufang.com/category/51942/"
+        },
+        {
+          "name": "果汁",
+          "url": "https://www.xiachufang.com/category/51823/"
+        },
+        {
+          "name": "花草茶",
+          "url": "https://www.xiachufang.com/category/52332/"
+        }
+      ]
     }
   },
   "肉类": {
     "猪": {
       "url": "https://www.xiachufang.com/category/5399/",
-      "items": {
-        "name": "肉末",
-        "url": "https://www.xiachufang.com/category/1003189/"
-      }
+      "items": [
+        {
+          "name": "猪肉",
+          "url": "https://www.xiachufang.com/category/731/"
+        },
+        {
+          "name": "排骨",
+          "url": "https://www.xiachufang.com/category/227/"
+        },
+        {
+          "name": "猪肉末",
+          "url": "https://www.xiachufang.com/category/792/"
+        },
+        {
+          "name": "五花肉",
+          "url": "https://www.xiachufang.com/category/1304/"
+        },
+        {
+          "name": "猪蹄",
+          "url": "https://www.xiachufang.com/category/423/"
+        },
+        {
+          "name": "瘦肉",
+          "url": "https://www.xiachufang.com/category/580/"
+        },
+        {
+          "name": "里脊",
+          "url": "https://www.xiachufang.com/category/3297/"
+        },
+        {
+          "name": "猪肝",
+          "url": "https://www.xiachufang.com/category/733/"
+        },
+        {
+          "name": "猪排",
+          "url": "https://www.xiachufang.com/category/5374/"
+        },
+        {
+          "name": "猪肚",
+          "url": "https://www.xiachufang.com/category/735/"
+        },
+        {
+          "name": "猪皮",
+          "url": "https://www.xiachufang.com/category/898/"
+        },
+        {
+          "name": "猪骨",
+          "url": "https://www.xiachufang.com/category/883/"
+        },
+        {
+          "name": "肥肠",
+          "url": "https://www.xiachufang.com/category/2618/"
+        },
+        {
+          "name": "猪油",
+          "url": "https://www.xiachufang.com/category/2190/"
+        },
+        {
+          "name": "猪腰",
+          "url": "https://www.xiachufang.com/category/865/"
+        },
+        {
+          "name": "猪耳朵",
+          "url": "https://www.xiachufang.com/category/220/"
+        },
+        {
+          "name": "猪心",
+          "url": "https://www.xiachufang.com/category/333/"
+        },
+        {
+          "name": "猪血",
+          "url": "https://www.xiachufang.com/category/876/"
+        },
+        {
+          "name": "猪肺",
+          "url": "https://www.xiachufang.com/category/742/"
+        },
+        {
+          "name": "肉末",
+          "url": "https://www.xiachufang.com/category/1003189/"
+        }
+      ]
     },
     "鸡": {
       "url": "https://www.xiachufang.com/category/104/",
-      "items": {
-        "name": "童子鸡",
-        "url": "https://www.xiachufang.com/category/1004800/"
-      }
+      "items": [
+        {
+          "name": "鸡翅",
+          "url": "https://www.xiachufang.com/category/1261/"
+        },
+        {
+          "name": "鸡胸",
+          "url": "https://www.xiachufang.com/category/5391/"
+        },
+        {
+          "name": "鸡腿",
+          "url": "https://www.xiachufang.com/category/1509/"
+        },
+        {
+          "name": "鸡爪",
+          "url": "https://www.xiachufang.com/category/1337/"
+        },
+        {
+          "name": "鸡肉",
+          "url": "https://www.xiachufang.com/category/1136/"
+        },
+        {
+          "name": "乌鸡",
+          "url": "https://www.xiachufang.com/category/1222/"
+        },
+        {
+          "name": "鸡胗",
+          "url": "https://www.xiachufang.com/category/1227/"
+        },
+        {
+          "name": "土鸡",
+          "url": "https://www.xiachufang.com/category/570/"
+        },
+        {
+          "name": "仔鸡",
+          "url": "https://www.xiachufang.com/category/393/"
+        },
+        {
+          "name": "三黄鸡",
+          "url": "https://www.xiachufang.com/category/278/"
+        },
+        {
+          "name": "鸡肝",
+          "url": "https://www.xiachufang.com/category/1131/"
+        },
+        {
+          "name": "老母鸡",
+          "url": "https://www.xiachufang.com/category/3155/"
+        },
+        {
+          "name": "鸡心",
+          "url": "https://www.xiachufang.com/category/1127/"
+        },
+        {
+          "name": "柴鸡",
+          "url": "https://www.xiachufang.com/category/738/"
+        },
+        {
+          "name": "童子鸡",
+          "url": "https://www.xiachufang.com/category/1004800/"
+        }
+      ]
     },
     "牛": {
       "url": "https://www.xiachufang.com/category/5443/",
-      "items": {
-        "name": "牛肉馅",
-        "url": "https://www.xiachufang.com/category/1012245/"
-      }
+      "items": [
+        {
+          "name": "牛肉",
+          "url": "https://www.xiachufang.com/category/1445/"
+        },
+        {
+          "name": "牛腩",
+          "url": "https://www.xiachufang.com/category/612/"
+        },
+        {
+          "name": "牛排",
+          "url": "https://www.xiachufang.com/category/938/"
+        },
+        {
+          "name": "肥牛",
+          "url": "https://www.xiachufang.com/category/2629/"
+        },
+        {
+          "name": "牛里脊",
+          "url": "https://www.xiachufang.com/category/5375/"
+        },
+        {
+          "name": "牛腱",
+          "url": "https://www.xiachufang.com/category/5403/"
+        },
+        {
+          "name": "牛尾",
+          "url": "https://www.xiachufang.com/category/2915/"
+        },
+        {
+          "name": "牛肉末",
+          "url": "https://www.xiachufang.com/category/479/"
+        },
+        {
+          "name": "牛筋",
+          "url": "https://www.xiachufang.com/category/808/"
+        },
+        {
+          "name": "牛百叶",
+          "url": "https://www.xiachufang.com/category/908/"
+        },
+        {
+          "name": "牛骨",
+          "url": "https://www.xiachufang.com/category/715/"
+        },
+        {
+          "name": "牛肉馅",
+          "url": "https://www.xiachufang.com/category/1012245/"
+        }
+      ]
     },
     "羊": {
       "url": "https://www.xiachufang.com/category/5418/",
-      "items": {
-        "name": "羊蝎子",
-        "url": "https://www.xiachufang.com/category/1243/"
-      }
+      "items": [
+        {
+          "name": "羊肉",
+          "url": "https://www.xiachufang.com/category/674/"
+        },
+        {
+          "name": "羊排",
+          "url": "https://www.xiachufang.com/category/145/"
+        },
+        {
+          "name": "羊腿",
+          "url": "https://www.xiachufang.com/category/3249/"
+        },
+        {
+          "name": "羊肉片",
+          "url": "https://www.xiachufang.com/category/156/"
+        },
+        {
+          "name": "羊蝎子",
+          "url": "https://www.xiachufang.com/category/1243/"
+        }
+      ]
     },
     "鸭": {
       "url": "https://www.xiachufang.com/category/275/",
-      "items": {
-        "name": "鸭爪",
-        "url": "https://www.xiachufang.com/category/1012232/"
-      }
+      "items": [
+        {
+          "name": "鸭腿",
+          "url": "https://www.xiachufang.com/category/1190/"
+        },
+        {
+          "name": "鸭肉",
+          "url": "https://www.xiachufang.com/category/274/"
+        },
+        {
+          "name": "老鸭",
+          "url": "https://www.xiachufang.com/category/115/"
+        },
+        {
+          "name": "鸭胗",
+          "url": "https://www.xiachufang.com/category/374/"
+        },
+        {
+          "name": "鸭血",
+          "url": "https://www.xiachufang.com/category/533/"
+        },
+        {
+          "name": "鸭掌",
+          "url": "https://www.xiachufang.com/category/714/"
+        },
+        {
+          "name": "鸭翅",
+          "url": "https://www.xiachufang.com/category/2653/"
+        },
+        {
+          "name": "鸭舌",
+          "url": "https://www.xiachufang.com/category/4068/"
+        },
+        {
+          "name": "鸭肠",
+          "url": "https://www.xiachufang.com/category/271/"
+        },
+        {
+          "name": "鸭脖",
+          "url": "https://www.xiachufang.com/category/1081/"
+        },
+        {
+          "name": "鸭肝",
+          "url": "https://www.xiachufang.com/category/277/"
+        },
+        {
+          "name": "鸭爪",
+          "url": "https://www.xiachufang.com/category/1012232/"
+        }
+      ]
     },
     "鸽子": {
       "url": "https://www.xiachufang.com/category/1442/",
@@ -146,45 +610,681 @@
   "蔬菜水果": {
     "果实类蔬菜": {
       "url": "",
-      "items": {
-        "name": "西红柿",
-        "url": "https://www.xiachufang.com/category/1009064/"
-      }
+      "items": [
+        {
+          "name": "彩椒",
+          "url": "https://www.xiachufang.com/category/601/"
+        },
+        {
+          "name": "番茄",
+          "url": "https://www.xiachufang.com/category/718/"
+        },
+        {
+          "name": "南瓜",
+          "url": "https://www.xiachufang.com/category/455/"
+        },
+        {
+          "name": "玉米",
+          "url": "https://www.xiachufang.com/category/208/"
+        },
+        {
+          "name": "茄子",
+          "url": "https://www.xiachufang.com/category/178/"
+        },
+        {
+          "name": "黄瓜",
+          "url": "https://www.xiachufang.com/category/1364/"
+        },
+        {
+          "name": "豇豆",
+          "url": "https://www.xiachufang.com/category/1215/"
+        },
+        {
+          "name": "青椒",
+          "url": "https://www.xiachufang.com/category/662/"
+        },
+        {
+          "name": "苦瓜",
+          "url": "https://www.xiachufang.com/category/155/"
+        },
+        {
+          "name": "冬瓜",
+          "url": "https://www.xiachufang.com/category/151/"
+        },
+        {
+          "name": "丝瓜",
+          "url": "https://www.xiachufang.com/category/454/"
+        },
+        {
+          "name": "秋葵",
+          "url": "https://www.xiachufang.com/category/501/"
+        },
+        {
+          "name": "西葫芦",
+          "url": "https://www.xiachufang.com/category/790/"
+        },
+        {
+          "name": "毛豆",
+          "url": "https://www.xiachufang.com/category/819/"
+        },
+        {
+          "name": "豌豆",
+          "url": "https://www.xiachufang.com/category/935/"
+        },
+        {
+          "name": "四季豆",
+          "url": "https://www.xiachufang.com/category/1063/"
+        },
+        {
+          "name": "荷兰豆",
+          "url": "https://www.xiachufang.com/category/1370/"
+        },
+        {
+          "name": "蚕豆",
+          "url": "https://www.xiachufang.com/category/1209/"
+        },
+        {
+          "name": "圣女果",
+          "url": "https://www.xiachufang.com/category/1292/"
+        },
+        {
+          "name": "扁豆",
+          "url": "https://www.xiachufang.com/category/214/"
+        },
+        {
+          "name": "刀豆",
+          "url": "https://www.xiachufang.com/category/1163/"
+        },
+        {
+          "name": "瓠瓜",
+          "url": "https://www.xiachufang.com/category/4219/"
+        },
+        {
+          "name": "玉米笋",
+          "url": "https://www.xiachufang.com/category/298/"
+        },
+        {
+          "name": "西红柿",
+          "url": "https://www.xiachufang.com/category/1009064/"
+        }
+      ]
     },
     "水果": {
       "url": "https://www.xiachufang.com/category/2490/",
-      "items": {
-        "name": "杏",
-        "url": "https://www.xiachufang.com/category/1012315/"
-      }
+      "items": [
+        {
+          "name": "时令水果",
+          "url": "https://www.xiachufang.com/category/5464/"
+        },
+        {
+          "name": "柠檬",
+          "url": "https://www.xiachufang.com/category/1299/"
+        },
+        {
+          "name": "椰子",
+          "url": "https://www.xiachufang.com/category/2819/"
+        },
+        {
+          "name": "草莓",
+          "url": "https://www.xiachufang.com/category/1128/"
+        },
+        {
+          "name": "橙",
+          "url": "https://www.xiachufang.com/category/1082/"
+        },
+        {
+          "name": "牛油果",
+          "url": "https://www.xiachufang.com/category/3140/"
+        },
+        {
+          "name": "木瓜",
+          "url": "https://www.xiachufang.com/category/1195/"
+        },
+        {
+          "name": "山楂",
+          "url": "https://www.xiachufang.com/category/471/"
+        },
+        {
+          "name": "蓝莓",
+          "url": "https://www.xiachufang.com/category/833/"
+        },
+        {
+          "name": "西瓜",
+          "url": "https://www.xiachufang.com/category/1101/"
+        },
+        {
+          "name": "柚子",
+          "url": "https://www.xiachufang.com/category/209/"
+        },
+        {
+          "name": "火龙果",
+          "url": "https://www.xiachufang.com/category/1280/"
+        },
+        {
+          "name": "樱桃",
+          "url": "https://www.xiachufang.com/category/1311/"
+        },
+        {
+          "name": "榴莲",
+          "url": "https://www.xiachufang.com/category/602/"
+        },
+        {
+          "name": "西柚",
+          "url": "https://www.xiachufang.com/category/5364/"
+        },
+        {
+          "name": "桃",
+          "url": "https://www.xiachufang.com/category/2687/"
+        },
+        {
+          "name": "葡萄",
+          "url": "https://www.xiachufang.com/category/3286/"
+        },
+        {
+          "name": "金橘",
+          "url": "https://www.xiachufang.com/category/517/"
+        },
+        {
+          "name": "黄桃",
+          "url": "https://www.xiachufang.com/category/1032/"
+        },
+        {
+          "name": "百香果",
+          "url": "https://www.xiachufang.com/category/1246/"
+        },
+        {
+          "name": "杨梅",
+          "url": "https://www.xiachufang.com/category/9/"
+        },
+        {
+          "name": "桔子",
+          "url": "https://www.xiachufang.com/category/1075/"
+        },
+        {
+          "name": "荔枝",
+          "url": "https://www.xiachufang.com/category/3173/"
+        },
+        {
+          "name": "无花果",
+          "url": "https://www.xiachufang.com/category/3109/"
+        },
+        {
+          "name": "石榴",
+          "url": "https://www.xiachufang.com/category/4471/"
+        },
+        {
+          "name": "杏子",
+          "url": "https://www.xiachufang.com/category/2571/"
+        },
+        {
+          "name": "桑葚",
+          "url": "https://www.xiachufang.com/category/2825/"
+        },
+        {
+          "name": "哈密瓜",
+          "url": "https://www.xiachufang.com/category/925/"
+        },
+        {
+          "name": "柿子",
+          "url": "https://www.xiachufang.com/category/2948/"
+        },
+        {
+          "name": "李子",
+          "url": "https://www.xiachufang.com/category/2669/"
+        },
+        {
+          "name": "青梅",
+          "url": "https://www.xiachufang.com/category/4595/"
+        },
+        {
+          "name": "枇杷",
+          "url": "https://www.xiachufang.com/category/5158/"
+        },
+        {
+          "name": "香瓜",
+          "url": "https://www.xiachufang.com/category/1028/"
+        },
+        {
+          "name": "甘蔗",
+          "url": "https://www.xiachufang.com/category/822/"
+        },
+        {
+          "name": "覆盆子",
+          "url": "https://www.xiachufang.com/category/5157/"
+        },
+        {
+          "name": "杨桃",
+          "url": "https://www.xiachufang.com/category/122/"
+        },
+        {
+          "name": "橘子",
+          "url": "https://www.xiachufang.com/category/1012312/"
+        },
+        {
+          "name": "金桔",
+          "url": "https://www.xiachufang.com/category/1004542/"
+        },
+        {
+          "name": "杏",
+          "url": "https://www.xiachufang.com/category/1012315/"
+        }
+      ]
     },
     "根茎蔬菜": {
       "url": "",
-      "items": {
-        "name": "菱角",
-        "url": "https://www.xiachufang.com/category/868/"
-      }
+      "items": [
+        {
+          "name": "土豆",
+          "url": "https://www.xiachufang.com/category/206/"
+        },
+        {
+          "name": "萝卜",
+          "url": "https://www.xiachufang.com/category/4359/"
+        },
+        {
+          "name": "紫薯",
+          "url": "https://www.xiachufang.com/category/632/"
+        },
+        {
+          "name": "红薯",
+          "url": "https://www.xiachufang.com/category/747/"
+        },
+        {
+          "name": "胡萝卜",
+          "url": "https://www.xiachufang.com/category/1137/"
+        },
+        {
+          "name": "山药",
+          "url": "https://www.xiachufang.com/category/524/"
+        },
+        {
+          "name": "藕",
+          "url": "https://www.xiachufang.com/category/503/"
+        },
+        {
+          "name": "芋头",
+          "url": "https://www.xiachufang.com/category/886/"
+        },
+        {
+          "name": "笋",
+          "url": "https://www.xiachufang.com/category/534/"
+        },
+        {
+          "name": "茭白",
+          "url": "https://www.xiachufang.com/category/1516/"
+        },
+        {
+          "name": "马蹄",
+          "url": "https://www.xiachufang.com/category/692/"
+        },
+        {
+          "name": "牛蒡",
+          "url": "https://www.xiachufang.com/category/132/"
+        },
+        {
+          "name": "菱角",
+          "url": "https://www.xiachufang.com/category/868/"
+        }
+      ]
     },
     "叶类蔬菜": {
       "url": "",
-      "items": {
-        "name": "披萨草",
-        "url": "https://www.xiachufang.com/category/1012331/"
-      }
+      "items": [
+        {
+          "name": "芹菜",
+          "url": "https://www.xiachufang.com/category/725/"
+        },
+        {
+          "name": "白菜",
+          "url": "https://www.xiachufang.com/category/1105/"
+        },
+        {
+          "name": "韭菜",
+          "url": "https://www.xiachufang.com/category/918/"
+        },
+        {
+          "name": "菠菜",
+          "url": "https://www.xiachufang.com/category/211/"
+        },
+        {
+          "name": "西兰花",
+          "url": "https://www.xiachufang.com/category/787/"
+        },
+        {
+          "name": "圆白菜",
+          "url": "https://www.xiachufang.com/category/622/"
+        },
+        {
+          "name": "花椰菜",
+          "url": "https://www.xiachufang.com/category/133/"
+        },
+        {
+          "name": "莴苣",
+          "url": "https://www.xiachufang.com/category/923/"
+        },
+        {
+          "name": "青菜",
+          "url": "https://www.xiachufang.com/category/1138/"
+        },
+        {
+          "name": "娃娃菜",
+          "url": "https://www.xiachufang.com/category/1176/"
+        },
+        {
+          "name": "生菜",
+          "url": "https://www.xiachufang.com/category/1355/"
+        },
+        {
+          "name": "甘蓝",
+          "url": "https://www.xiachufang.com/category/306/"
+        },
+        {
+          "name": "蒜薹",
+          "url": "https://www.xiachufang.com/category/1144/"
+        },
+        {
+          "name": "紫甘蓝",
+          "url": "https://www.xiachufang.com/category/435/"
+        },
+        {
+          "name": "空心菜",
+          "url": "https://www.xiachufang.com/category/1213/"
+        },
+        {
+          "name": "油菜",
+          "url": "https://www.xiachufang.com/category/666/"
+        },
+        {
+          "name": "荠菜",
+          "url": "https://www.xiachufang.com/category/894/"
+        },
+        {
+          "name": "香椿",
+          "url": "https://www.xiachufang.com/category/1230/"
+        },
+        {
+          "name": "茼蒿",
+          "url": "https://www.xiachufang.com/category/981/"
+        },
+        {
+          "name": "菜心",
+          "url": "https://www.xiachufang.com/category/3063/"
+        },
+        {
+          "name": "芥兰",
+          "url": "https://www.xiachufang.com/category/121/"
+        },
+        {
+          "name": "黄花菜",
+          "url": "https://www.xiachufang.com/category/1216/"
+        },
+        {
+          "name": "韭黄",
+          "url": "https://www.xiachufang.com/category/188/"
+        },
+        {
+          "name": "苋菜",
+          "url": "https://www.xiachufang.com/category/3113/"
+        },
+        {
+          "name": "紫苏",
+          "url": "https://www.xiachufang.com/category/1343/"
+        },
+        {
+          "name": "芥菜",
+          "url": "https://www.xiachufang.com/category/1196/"
+        },
+        {
+          "name": "油麦菜",
+          "url": "https://www.xiachufang.com/category/1469/"
+        },
+        {
+          "name": "豌豆苗",
+          "url": "https://www.xiachufang.com/category/328/"
+        },
+        {
+          "name": "苦菊",
+          "url": "https://www.xiachufang.com/category/2959/"
+        },
+        {
+          "name": "青蒜",
+          "url": "https://www.xiachufang.com/category/1295/"
+        },
+        {
+          "name": "鱼腥草",
+          "url": "https://www.xiachufang.com/category/4120/"
+        },
+        {
+          "name": "马兰",
+          "url": "https://www.xiachufang.com/category/253/"
+        },
+        {
+          "name": "蕨菜",
+          "url": "https://www.xiachufang.com/category/139/"
+        },
+        {
+          "name": "西洋菜",
+          "url": "https://www.xiachufang.com/category/2677/"
+        },
+        {
+          "name": "水芹",
+          "url": "https://www.xiachufang.com/category/1171/"
+        },
+        {
+          "name": "儿菜",
+          "url": "https://www.xiachufang.com/category/2657/"
+        },
+        {
+          "name": "豌豆尖",
+          "url": "https://www.xiachufang.com/category/609/"
+        },
+        {
+          "name": "芝麻菜",
+          "url": "https://www.xiachufang.com/category/647/"
+        },
+        {
+          "name": "芦蒿",
+          "url": "https://www.xiachufang.com/category/4179/"
+        },
+        {
+          "name": "穿心莲",
+          "url": "https://www.xiachufang.com/category/4086/"
+        },
+        {
+          "name": "孢子甘蓝",
+          "url": "https://www.xiachufang.com/category/2558/"
+        },
+        {
+          "name": "萝卜苗",
+          "url": "https://www.xiachufang.com/category/3298/"
+        },
+        {
+          "name": "红菜苔",
+          "url": "https://www.xiachufang.com/category/4127/"
+        },
+        {
+          "name": "牛至",
+          "url": "https://www.xiachufang.com/category/3041/"
+        },
+        {
+          "name": "蒿子杆",
+          "url": "https://www.xiachufang.com/category/4475/"
+        },
+        {
+          "name": "包菜",
+          "url": "https://www.xiachufang.com/category/1008865/"
+        },
+        {
+          "name": "莴笋",
+          "url": "https://www.xiachufang.com/category/1010303/"
+        },
+        {
+          "name": "花菜",
+          "url": "https://www.xiachufang.com/category/1000901/"
+        },
+        {
+          "name": "蒜苔",
+          "url": "https://www.xiachufang.com/category/1003510/"
+        },
+        {
+          "name": "豆苗",
+          "url": "https://www.xiachufang.com/category/1005601/"
+        },
+        {
+          "name": "披萨草",
+          "url": "https://www.xiachufang.com/category/1012331/"
+        }
+      ]
     },
     "菌菇类": {
       "url": "",
-      "items": {
-        "name": "秀珍菇",
-        "url": "https://www.xiachufang.com/category/1006515/"
-      }
+      "items": [
+        {
+          "name": "香菇",
+          "url": "https://www.xiachufang.com/category/468/"
+        },
+        {
+          "name": "杏鲍菇",
+          "url": "https://www.xiachufang.com/category/443/"
+        },
+        {
+          "name": "银耳",
+          "url": "https://www.xiachufang.com/category/1389/"
+        },
+        {
+          "name": "木耳",
+          "url": "https://www.xiachufang.com/category/1383/"
+        },
+        {
+          "name": "金针菇",
+          "url": "https://www.xiachufang.com/category/998/"
+        },
+        {
+          "name": "蘑菇",
+          "url": "https://www.xiachufang.com/category/881/"
+        },
+        {
+          "name": "茶树菇",
+          "url": "https://www.xiachufang.com/category/416/"
+        },
+        {
+          "name": "平菇",
+          "url": "https://www.xiachufang.com/category/175/"
+        },
+        {
+          "name": "松茸",
+          "url": "https://www.xiachufang.com/category/3885/"
+        },
+        {
+          "name": "鸡腿菇",
+          "url": "https://www.xiachufang.com/category/1187/"
+        },
+        {
+          "name": "草菇",
+          "url": "https://www.xiachufang.com/category/1229/"
+        },
+        {
+          "name": "竹荪",
+          "url": "https://www.xiachufang.com/category/4314/"
+        },
+        {
+          "name": "蟹味菇",
+          "url": "https://www.xiachufang.com/category/1461/"
+        },
+        {
+          "name": "花菇",
+          "url": "https://www.xiachufang.com/category/466/"
+        },
+        {
+          "name": "猴头菇",
+          "url": "https://www.xiachufang.com/category/1109/"
+        },
+        {
+          "name": "牛肝菌",
+          "url": "https://www.xiachufang.com/category/4099/"
+        },
+        {
+          "name": "灵芝",
+          "url": "https://www.xiachufang.com/category/4379/"
+        },
+        {
+          "name": "榛蘑",
+          "url": "https://www.xiachufang.com/category/13/"
+        },
+        {
+          "name": "白玉菇",
+          "url": "https://www.xiachufang.com/category/1481/"
+        },
+        {
+          "name": "姬松茸",
+          "url": "https://www.xiachufang.com/category/5154/"
+        },
+        {
+          "name": "滑子菇",
+          "url": "https://www.xiachufang.com/category/429/"
+        },
+        {
+          "name": "发菜",
+          "url": "https://www.xiachufang.com/category/5153/"
+        },
+        {
+          "name": "白灵菇",
+          "url": "https://www.xiachufang.com/category/4270/"
+        },
+        {
+          "name": "袖珍菇",
+          "url": "https://www.xiachufang.com/category/508/"
+        },
+        {
+          "name": "双孢菇",
+          "url": "https://www.xiachufang.com/category/3234/"
+        },
+        {
+          "name": "秀珍菇",
+          "url": "https://www.xiachufang.com/category/1006515/"
+        }
+      ]
     },
     "花朵植物类": {
       "url": "",
-      "items": {
-        "name": "金银花",
-        "url": "https://www.xiachufang.com/category/3117/"
-      }
+      "items": [
+        {
+          "name": "茶叶",
+          "url": "https://www.xiachufang.com/category/1756/"
+        },
+        {
+          "name": "桂花",
+          "url": "https://www.xiachufang.com/category/2376/"
+        },
+        {
+          "name": "玫瑰",
+          "url": "https://www.xiachufang.com/category/3956/"
+        },
+        {
+          "name": "薄荷",
+          "url": "https://www.xiachufang.com/category/2004/"
+        },
+        {
+          "name": "菊花",
+          "url": "https://www.xiachufang.com/category/74/"
+        },
+        {
+          "name": "洛神花",
+          "url": "https://www.xiachufang.com/category/5155/"
+        },
+        {
+          "name": "茉莉花",
+          "url": "https://www.xiachufang.com/category/5156/"
+        },
+        {
+          "name": "槐花",
+          "url": "https://www.xiachufang.com/category/3315/"
+        },
+        {
+          "name": "金银花",
+          "url": "https://www.xiachufang.com/category/3117/"
+        }
+      ]
     }
   },
   "汤粥主食": {
@@ -194,10 +1294,32 @@
     },
     "饭": {
       "url": "https://www.xiachufang.com/category/20132/",
-      "items": {
-        "name": "烩饭",
-        "url": "https://www.xiachufang.com/category/20142/"
-      }
+      "items": [
+        {
+          "name": "炒饭",
+          "url": "https://www.xiachufang.com/category/20143/"
+        },
+        {
+          "name": "饭团",
+          "url": "https://www.xiachufang.com/category/50580/"
+        },
+        {
+          "name": "盖浇饭",
+          "url": "https://www.xiachufang.com/category/20140/"
+        },
+        {
+          "name": "煲仔饭",
+          "url": "https://www.xiachufang.com/category/51888/"
+        },
+        {
+          "name": "焗饭",
+          "url": "https://www.xiachufang.com/category/20144/"
+        },
+        {
+          "name": "烩饭",
+          "url": "https://www.xiachufang.com/category/20142/"
+        }
+      ]
     },
     "饼": {
       "url": "https://www.xiachufang.com/category/20134/",
@@ -233,70 +1355,336 @@
     },
     "面条": {
       "url": "https://www.xiachufang.com/category/1025/",
-      "items": {
-        "name": "焖面",
-        "url": "https://www.xiachufang.com/category/20145/"
-      }
+      "items": [
+        {
+          "name": "拌面",
+          "url": "https://www.xiachufang.com/category/20146/"
+        },
+        {
+          "name": "炒面",
+          "url": "https://www.xiachufang.com/category/51091/"
+        },
+        {
+          "name": "汤面",
+          "url": "https://www.xiachufang.com/category/52421/"
+        },
+        {
+          "name": "凉面",
+          "url": "https://www.xiachufang.com/category/52144/"
+        },
+        {
+          "name": "焖面",
+          "url": "https://www.xiachufang.com/category/20145/"
+        }
+      ]
     }
   },
   "口味特色": {
     "烹调方法": {
       "url": "",
-      "items": {
-        "name": "免烤",
-        "url": "https://www.xiachufang.com/category/51891/"
-      }
+      "items": [
+        {
+          "name": "煎",
+          "url": "https://www.xiachufang.com/category/51715/"
+        },
+        {
+          "name": "蒸",
+          "url": "https://www.xiachufang.com/category/51750/"
+        },
+        {
+          "name": "炖",
+          "url": "https://www.xiachufang.com/category/40067/"
+        },
+        {
+          "name": "红烧",
+          "url": "https://www.xiachufang.com/category/51526/"
+        },
+        {
+          "name": "炸",
+          "url": "https://www.xiachufang.com/category/51329/"
+        },
+        {
+          "name": "卤",
+          "url": "https://www.xiachufang.com/category/40068/"
+        },
+        {
+          "name": "干锅",
+          "url": "https://www.xiachufang.com/category/40062/"
+        },
+        {
+          "name": "火锅",
+          "url": "https://www.xiachufang.com/category/40063/"
+        },
+        {
+          "name": "免烤",
+          "url": "https://www.xiachufang.com/category/51891/"
+        }
+      ]
     },
     "口味": {
       "url": "",
-      "items": {
-        "name": "清淡",
-        "url": "https://www.xiachufang.com/category/51460/"
-      }
+      "items": [
+        {
+          "name": "辣",
+          "url": "https://www.xiachufang.com/category/51359/"
+        },
+        {
+          "name": "咖喱",
+          "url": "https://www.xiachufang.com/category/51922/"
+        },
+        {
+          "name": "糖醋",
+          "url": "https://www.xiachufang.com/category/40066/"
+        },
+        {
+          "name": "蒜香",
+          "url": "https://www.xiachufang.com/category/52413/"
+        },
+        {
+          "name": "酸甜",
+          "url": "https://www.xiachufang.com/category/51449/"
+        },
+        {
+          "name": "奶香",
+          "url": "https://www.xiachufang.com/category/52407/"
+        },
+        {
+          "name": "孜然",
+          "url": "https://www.xiachufang.com/category/52401/"
+        },
+        {
+          "name": "鱼香",
+          "url": "https://www.xiachufang.com/category/51875/"
+        },
+        {
+          "name": "五香",
+          "url": "https://www.xiachufang.com/category/52399/"
+        },
+        {
+          "name": "清淡",
+          "url": "https://www.xiachufang.com/category/51460/"
+        }
+      ]
     },
     "器具": {
       "url": "",
-      "items": {
-        "name": "塔吉锅",
-        "url": "https://www.xiachufang.com/category/51909/"
-      }
+      "items": [
+        {
+          "name": "烤箱",
+          "url": "https://www.xiachufang.com/category/40057/"
+        },
+        {
+          "name": "电饭煲",
+          "url": "https://www.xiachufang.com/category/51313/"
+        },
+        {
+          "name": "微波炉",
+          "url": "https://www.xiachufang.com/category/40059/"
+        },
+        {
+          "name": "平底锅",
+          "url": "https://www.xiachufang.com/category/40060/"
+        },
+        {
+          "name": "塔吉锅",
+          "url": "https://www.xiachufang.com/category/51909/"
+        }
+      ]
     },
     "异国风味": {
       "url": "",
-      "items": {
-        "name": "东南亚",
-        "url": "https://www.xiachufang.com/category/51965/"
-      }
+      "items": [
+        {
+          "name": "日式",
+          "url": "https://www.xiachufang.com/category/40081/"
+        },
+        {
+          "name": "韩式",
+          "url": "https://www.xiachufang.com/category/40080/"
+        },
+        {
+          "name": "西式",
+          "url": "https://www.xiachufang.com/category/40079/"
+        },
+        {
+          "name": "西餐",
+          "url": "https://www.xiachufang.com/category/51305/"
+        },
+        {
+          "name": "东南亚",
+          "url": "https://www.xiachufang.com/category/51965/"
+        }
+      ]
     }
   },
   "水产": {
     "鱼": {
       "url": "https://www.xiachufang.com/category/957/",
-      "items": {
-        "name": "鱼肚",
-        "url": "https://www.xiachufang.com/category/5152/"
-      }
+      "items": [
+        {
+          "name": "海水鱼",
+          "url": "https://www.xiachufang.com/category/5404/"
+        },
+        {
+          "name": "淡水鱼",
+          "url": "https://www.xiachufang.com/category/5448/"
+        },
+        {
+          "name": "鱼头",
+          "url": "https://www.xiachufang.com/category/523/"
+        },
+        {
+          "name": "鱼干",
+          "url": "https://www.xiachufang.com/category/3042/"
+        },
+        {
+          "name": "鱼籽",
+          "url": "https://www.xiachufang.com/category/427/"
+        },
+        {
+          "name": "鱼肚",
+          "url": "https://www.xiachufang.com/category/5152/"
+        }
+      ]
     },
     "虾": {
       "url": "https://www.xiachufang.com/category/469/",
-      "items": {
-        "name": "大虾",
-        "url": "https://www.xiachufang.com/category/1002652/"
-      }
+      "items": [
+        {
+          "name": "虾仁",
+          "url": "https://www.xiachufang.com/category/826/"
+        },
+        {
+          "name": "海米",
+          "url": "https://www.xiachufang.com/category/875/"
+        },
+        {
+          "name": "虾皮",
+          "url": "https://www.xiachufang.com/category/1053/"
+        },
+        {
+          "name": "明虾",
+          "url": "https://www.xiachufang.com/category/1191/"
+        },
+        {
+          "name": "基围虾",
+          "url": "https://www.xiachufang.com/category/41/"
+        },
+        {
+          "name": "龙虾",
+          "url": "https://www.xiachufang.com/category/2918/"
+        },
+        {
+          "name": "小龙虾",
+          "url": "https://www.xiachufang.com/category/5322/"
+        },
+        {
+          "name": "河虾",
+          "url": "https://www.xiachufang.com/category/76/"
+        },
+        {
+          "name": "海虾",
+          "url": "https://www.xiachufang.com/category/3362/"
+        },
+        {
+          "name": "皮皮虾",
+          "url": "https://www.xiachufang.com/category/3402/"
+        },
+        {
+          "name": "北极虾",
+          "url": "https://www.xiachufang.com/category/1002/"
+        },
+        {
+          "name": "虾干",
+          "url": "https://www.xiachufang.com/category/1024/"
+        },
+        {
+          "name": "青虾",
+          "url": "https://www.xiachufang.com/category/2714/"
+        },
+        {
+          "name": "草虾",
+          "url": "https://www.xiachufang.com/category/215/"
+        },
+        {
+          "name": "海白虾",
+          "url": "https://www.xiachufang.com/category/1159/"
+        },
+        {
+          "name": "虾米",
+          "url": "https://www.xiachufang.com/category/1007968/"
+        },
+        {
+          "name": "大虾",
+          "url": "https://www.xiachufang.com/category/1002652/"
+        }
+      ]
     },
     "贝": {
       "url": "",
-      "items": {
-        "name": "河蚌",
-        "url": "https://www.xiachufang.com/category/4556/"
-      }
+      "items": [
+        {
+          "name": "蛤蜊",
+          "url": "https://www.xiachufang.com/category/5282/"
+        },
+        {
+          "name": "干贝",
+          "url": "https://www.xiachufang.com/category/176/"
+        },
+        {
+          "name": "鲍鱼",
+          "url": "https://www.xiachufang.com/category/21/"
+        },
+        {
+          "name": "扇贝",
+          "url": "https://www.xiachufang.com/category/1488/"
+        },
+        {
+          "name": "牡蛎",
+          "url": "https://www.xiachufang.com/category/330/"
+        },
+        {
+          "name": "青口",
+          "url": "https://www.xiachufang.com/category/3992/"
+        },
+        {
+          "name": "蛏子",
+          "url": "https://www.xiachufang.com/category/1411/"
+        },
+        {
+          "name": "鲜贝",
+          "url": "https://www.xiachufang.com/category/1476/"
+        },
+        {
+          "name": "北极贝",
+          "url": "https://www.xiachufang.com/category/4126/"
+        },
+        {
+          "name": "河蚌",
+          "url": "https://www.xiachufang.com/category/4556/"
+        }
+      ]
     },
     "螃蟹": {
       "url": "https://www.xiachufang.com/category/1183/",
-      "items": {
-        "name": "蟹黄",
-        "url": "https://www.xiachufang.com/category/649/"
-      }
+      "items": [
+        {
+          "name": "梭子蟹",
+          "url": "https://www.xiachufang.com/category/953/"
+        },
+        {
+          "name": "大闸蟹",
+          "url": "https://www.xiachufang.com/category/478/"
+        },
+        {
+          "name": "蟹肉",
+          "url": "https://www.xiachufang.com/category/515/"
+        },
+        {
+          "name": "蟹黄",
+          "url": "https://www.xiachufang.com/category/649/"
+        }
+      ]
     },
     "其他水产": {
       "url": "",
@@ -306,47 +1694,635 @@
   "蛋奶豆制品": {
     "蛋类": {
       "url": "",
-      "items": {
-        "name": "咸鸭蛋",
-        "url": "https://www.xiachufang.com/category/1007600/"
-      }
+      "items": [
+        {
+          "name": "鸡蛋",
+          "url": "https://www.xiachufang.com/category/394/"
+        },
+        {
+          "name": "咸蛋",
+          "url": "https://www.xiachufang.com/category/441/"
+        },
+        {
+          "name": "皮蛋",
+          "url": "https://www.xiachufang.com/category/689/"
+        },
+        {
+          "name": "鹌鹑蛋",
+          "url": "https://www.xiachufang.com/category/292/"
+        },
+        {
+          "name": "鸭蛋",
+          "url": "https://www.xiachufang.com/category/4389/"
+        },
+        {
+          "name": "咸鸭蛋",
+          "url": "https://www.xiachufang.com/category/1007600/"
+        }
+      ]
     },
     "奶制品": {
       "url": "",
-      "items": {
-        "name": "芝士",
-        "url": "https://www.xiachufang.com/category/1007873/"
-      }
+      "items": [
+        {
+          "name": "牛奶",
+          "url": "https://www.xiachufang.com/category/2316/"
+        },
+        {
+          "name": "黄油",
+          "url": "https://www.xiachufang.com/category/1871/"
+        },
+        {
+          "name": "巧克力",
+          "url": "https://www.xiachufang.com/category/1031/"
+        },
+        {
+          "name": "奶油",
+          "url": "https://www.xiachufang.com/category/5296/"
+        },
+        {
+          "name": "奶酪",
+          "url": "https://www.xiachufang.com/category/2300/"
+        },
+        {
+          "name": "酸奶",
+          "url": "https://www.xiachufang.com/category/2125/"
+        },
+        {
+          "name": "黑巧克力",
+          "url": "https://www.xiachufang.com/category/1068/"
+        },
+        {
+          "name": "淡奶油",
+          "url": "https://www.xiachufang.com/category/2138/"
+        },
+        {
+          "name": "奶油奶酪",
+          "url": "https://www.xiachufang.com/category/2248/"
+        },
+        {
+          "name": "炼乳",
+          "url": "https://www.xiachufang.com/category/1645/"
+        },
+        {
+          "name": "奶粉",
+          "url": "https://www.xiachufang.com/category/1520/"
+        },
+        {
+          "name": "马苏里拉奶酪",
+          "url": "https://www.xiachufang.com/category/2246/"
+        },
+        {
+          "name": "白巧克力",
+          "url": "https://www.xiachufang.com/category/297/"
+        },
+        {
+          "name": "酸奶油",
+          "url": "https://www.xiachufang.com/category/1908/"
+        },
+        {
+          "name": "酥油",
+          "url": "https://www.xiachufang.com/category/4632/"
+        },
+        {
+          "name": "芝士",
+          "url": "https://www.xiachufang.com/category/1007873/"
+        }
+      ]
     },
     "豆制品": {
       "url": "",
-      "items": {
-        "name": "豆腐皮",
-        "url": "https://www.xiachufang.com/category/1000426/"
-      }
+      "items": [
+        {
+          "name": "豆腐",
+          "url": "https://www.xiachufang.com/category/80/"
+        },
+        {
+          "name": "香干",
+          "url": "https://www.xiachufang.com/category/1405/"
+        },
+        {
+          "name": "豆渣",
+          "url": "https://www.xiachufang.com/category/177/"
+        },
+        {
+          "name": "千张",
+          "url": "https://www.xiachufang.com/category/730/"
+        },
+        {
+          "name": "腐竹",
+          "url": "https://www.xiachufang.com/category/947/"
+        },
+        {
+          "name": "素鸡",
+          "url": "https://www.xiachufang.com/category/315/"
+        },
+        {
+          "name": "油豆皮",
+          "url": "https://www.xiachufang.com/category/5446/"
+        },
+        {
+          "name": "豆干",
+          "url": "https://www.xiachufang.com/category/1005208/"
+        },
+        {
+          "name": "豆腐皮",
+          "url": "https://www.xiachufang.com/category/1000426/"
+        }
+      ]
     }
   },
   "米面干果腌咸": {
     "米面类": {
       "url": "",
-      "items": {
-        "name": "黄豆粉",
-        "url": "https://www.xiachufang.com/category/1011237/"
-      }
+      "items": [
+        {
+          "name": "面粉",
+          "url": "https://www.xiachufang.com/category/727/"
+        },
+        {
+          "name": "面条",
+          "url": "https://www.xiachufang.com/category/1025/"
+        },
+        {
+          "name": "大米",
+          "url": "https://www.xiachufang.com/category/743/"
+        },
+        {
+          "name": "高筋面粉",
+          "url": "https://www.xiachufang.com/category/700/"
+        },
+        {
+          "name": "意大利面",
+          "url": "https://www.xiachufang.com/category/559/"
+        },
+        {
+          "name": "糯米",
+          "url": "https://www.xiachufang.com/category/846/"
+        },
+        {
+          "name": "低筋面粉",
+          "url": "https://www.xiachufang.com/category/1282/"
+        },
+        {
+          "name": "年糕",
+          "url": "https://www.xiachufang.com/category/1022/"
+        },
+        {
+          "name": "西米",
+          "url": "https://www.xiachufang.com/category/1376/"
+        },
+        {
+          "name": "糯米粉",
+          "url": "https://www.xiachufang.com/category/2238/"
+        },
+        {
+          "name": "粉丝",
+          "url": "https://www.xiachufang.com/category/648/"
+        },
+        {
+          "name": "燕麦",
+          "url": "https://www.xiachufang.com/category/370/"
+        },
+        {
+          "name": "米粉",
+          "url": "https://www.xiachufang.com/category/35/"
+        },
+        {
+          "name": "酒酿",
+          "url": "https://www.xiachufang.com/category/1780/"
+        },
+        {
+          "name": "燕麦片",
+          "url": "https://www.xiachufang.com/category/400/"
+        },
+        {
+          "name": "乌冬面",
+          "url": "https://www.xiachufang.com/category/4159/"
+        },
+        {
+          "name": "小米",
+          "url": "https://www.xiachufang.com/category/3080/"
+        },
+        {
+          "name": "玉米面",
+          "url": "https://www.xiachufang.com/category/1090/"
+        },
+        {
+          "name": "全麦粉",
+          "url": "https://www.xiachufang.com/category/497/"
+        },
+        {
+          "name": "黑米",
+          "url": "https://www.xiachufang.com/category/350/"
+        },
+        {
+          "name": "魔芋",
+          "url": "https://www.xiachufang.com/category/117/"
+        },
+        {
+          "name": "方便面",
+          "url": "https://www.xiachufang.com/category/4102/"
+        },
+        {
+          "name": "粉条",
+          "url": "https://www.xiachufang.com/category/1283/"
+        },
+        {
+          "name": "米线",
+          "url": "https://www.xiachufang.com/category/657/"
+        },
+        {
+          "name": "荞麦面",
+          "url": "https://www.xiachufang.com/category/854/"
+        },
+        {
+          "name": "油条",
+          "url": "https://www.xiachufang.com/category/498/"
+        },
+        {
+          "name": "黄豆面",
+          "url": "https://www.xiachufang.com/category/2807/"
+        },
+        {
+          "name": "消化饼干",
+          "url": "https://www.xiachufang.com/category/816/"
+        },
+        {
+          "name": "面筋",
+          "url": "https://www.xiachufang.com/category/33/"
+        },
+        {
+          "name": "粘米粉",
+          "url": "https://www.xiachufang.com/category/197/"
+        },
+        {
+          "name": "凉粉",
+          "url": "https://www.xiachufang.com/category/129/"
+        },
+        {
+          "name": "糙米",
+          "url": "https://www.xiachufang.com/category/1485/"
+        },
+        {
+          "name": "河粉",
+          "url": "https://www.xiachufang.com/category/4020/"
+        },
+        {
+          "name": "紫米",
+          "url": "https://www.xiachufang.com/category/90/"
+        },
+        {
+          "name": "烤麸",
+          "url": "https://www.xiachufang.com/category/2885/"
+        },
+        {
+          "name": "小麦胚芽",
+          "url": "https://www.xiachufang.com/category/1162/"
+        },
+        {
+          "name": "澄面",
+          "url": "https://www.xiachufang.com/category/4450/"
+        },
+        {
+          "name": "粉皮",
+          "url": "https://www.xiachufang.com/category/7/"
+        },
+        {
+          "name": "蕨根粉",
+          "url": "https://www.xiachufang.com/category/2549/"
+        },
+        {
+          "name": "藕粉",
+          "url": "https://www.xiachufang.com/category/3172/"
+        },
+        {
+          "name": "红曲米",
+          "url": "https://www.xiachufang.com/category/1203/"
+        },
+        {
+          "name": "莜面",
+          "url": "https://www.xiachufang.com/category/3129/"
+        },
+        {
+          "name": "黄米",
+          "url": "https://www.xiachufang.com/category/45/"
+        },
+        {
+          "name": "荞麦",
+          "url": "https://www.xiachufang.com/category/989/"
+        },
+        {
+          "name": "大麦",
+          "url": "https://www.xiachufang.com/category/4582/"
+        },
+        {
+          "name": "高粱米",
+          "url": "https://www.xiachufang.com/category/3983/"
+        },
+        {
+          "name": "红米",
+          "url": "https://www.xiachufang.com/category/1012576/"
+        },
+        {
+          "name": "澄粉",
+          "url": "https://www.xiachufang.com/category/1012512/"
+        },
+        {
+          "name": "黄豆粉",
+          "url": "https://www.xiachufang.com/category/1011237/"
+        }
+      ]
     },
     "干果类": {
       "url": "",
-      "items": {
-        "name": "白果",
-        "url": "https://www.xiachufang.com/category/1005848/"
-      }
+      "items": [
+        {
+          "name": "芝麻",
+          "url": "https://www.xiachufang.com/category/1807/"
+        },
+        {
+          "name": "花生",
+          "url": "https://www.xiachufang.com/category/1065/"
+        },
+        {
+          "name": "杏仁",
+          "url": "https://www.xiachufang.com/category/300/"
+        },
+        {
+          "name": "红豆",
+          "url": "https://www.xiachufang.com/category/234/"
+        },
+        {
+          "name": "枣",
+          "url": "https://www.xiachufang.com/category/2313/"
+        },
+        {
+          "name": "核桃",
+          "url": "https://www.xiachufang.com/category/1419/"
+        },
+        {
+          "name": "板栗",
+          "url": "https://www.xiachufang.com/category/235/"
+        },
+        {
+          "name": "蔓越莓",
+          "url": "https://www.xiachufang.com/category/688/"
+        },
+        {
+          "name": "绿豆",
+          "url": "https://www.xiachufang.com/category/98/"
+        },
+        {
+          "name": "黄豆",
+          "url": "https://www.xiachufang.com/category/280/"
+        },
+        {
+          "name": "薏米",
+          "url": "https://www.xiachufang.com/category/1141/"
+        },
+        {
+          "name": "葡萄干",
+          "url": "https://www.xiachufang.com/category/1757/"
+        },
+        {
+          "name": "莲子",
+          "url": "https://www.xiachufang.com/category/1020/"
+        },
+        {
+          "name": "橄榄",
+          "url": "https://www.xiachufang.com/category/4139/"
+        },
+        {
+          "name": "黑豆",
+          "url": "https://www.xiachufang.com/category/134/"
+        },
+        {
+          "name": "蜜豆",
+          "url": "https://www.xiachufang.com/category/4634/"
+        },
+        {
+          "name": "芸豆",
+          "url": "https://www.xiachufang.com/category/348/"
+        },
+        {
+          "name": "腰果",
+          "url": "https://www.xiachufang.com/category/769/"
+        },
+        {
+          "name": "桃胶",
+          "url": "https://www.xiachufang.com/category/3222/"
+        },
+        {
+          "name": "乌梅",
+          "url": "https://www.xiachufang.com/category/1853/"
+        },
+        {
+          "name": "松仁",
+          "url": "https://www.xiachufang.com/category/8/"
+        },
+        {
+          "name": "无花果",
+          "url": "https://www.xiachufang.com/category/3109/"
+        },
+        {
+          "name": "银杏果",
+          "url": "https://www.xiachufang.com/category/598/"
+        },
+        {
+          "name": "话梅",
+          "url": "https://www.xiachufang.com/category/2291/"
+        },
+        {
+          "name": "榛子",
+          "url": "https://www.xiachufang.com/category/474/"
+        },
+        {
+          "name": "鹰嘴豆",
+          "url": "https://www.xiachufang.com/category/5159/"
+        },
+        {
+          "name": "罗汉果",
+          "url": "https://www.xiachufang.com/category/4437/"
+        },
+        {
+          "name": "芡实",
+          "url": "https://www.xiachufang.com/category/1657/"
+        },
+        {
+          "name": "开心果",
+          "url": "https://www.xiachufang.com/category/2986/"
+        },
+        {
+          "name": "干山楂",
+          "url": "https://www.xiachufang.com/category/4221/"
+        },
+        {
+          "name": "南瓜子",
+          "url": "https://www.xiachufang.com/category/5160/"
+        },
+        {
+          "name": "瓜子仁",
+          "url": "https://www.xiachufang.com/category/3271/"
+        },
+        {
+          "name": "眉豆",
+          "url": "https://www.xiachufang.com/category/1334/"
+        },
+        {
+          "name": "红腰豆",
+          "url": "https://www.xiachufang.com/category/3292/"
+        },
+        {
+          "name": "松子",
+          "url": "https://www.xiachufang.com/category/1012410/"
+        },
+        {
+          "name": "山楂干",
+          "url": "https://www.xiachufang.com/category/1012413/"
+        },
+        {
+          "name": "白果",
+          "url": "https://www.xiachufang.com/category/1005848/"
+        }
+      ]
     },
     "腌咸制品": {
       "url": "",
-      "items": {
-        "name": "酸豆角",
-        "url": "https://www.xiachufang.com/category/1007639/"
-      }
+      "items": [
+        {
+          "name": "火腿",
+          "url": "https://www.xiachufang.com/category/671/"
+        },
+        {
+          "name": "香肠",
+          "url": "https://www.xiachufang.com/category/324/"
+        },
+        {
+          "name": "培根",
+          "url": "https://www.xiachufang.com/category/1437/"
+        },
+        {
+          "name": "腊肉",
+          "url": "https://www.xiachufang.com/category/997/"
+        },
+        {
+          "name": "酸菜",
+          "url": "https://www.xiachufang.com/category/1150/"
+        },
+        {
+          "name": "泡菜",
+          "url": "https://www.xiachufang.com/category/653/"
+        },
+        {
+          "name": "肉松",
+          "url": "https://www.xiachufang.com/category/975/"
+        },
+        {
+          "name": "梅干菜",
+          "url": "https://www.xiachufang.com/category/658/"
+        },
+        {
+          "name": "雪里蕻",
+          "url": "https://www.xiachufang.com/category/431/"
+        },
+        {
+          "name": "榨菜",
+          "url": "https://www.xiachufang.com/category/940/"
+        },
+        {
+          "name": "辣白菜",
+          "url": "https://www.xiachufang.com/category/1049/"
+        },
+        {
+          "name": "笋干",
+          "url": "https://www.xiachufang.com/category/1415/"
+        },
+        {
+          "name": "鱼丸",
+          "url": "https://www.xiachufang.com/category/1463/"
+        },
+        {
+          "name": "橄榄菜",
+          "url": "https://www.xiachufang.com/category/1356/"
+        },
+        {
+          "name": "咸菜",
+          "url": "https://www.xiachufang.com/category/1338/"
+        },
+        {
+          "name": "萝卜干",
+          "url": "https://www.xiachufang.com/category/838/"
+        },
+        {
+          "name": "咸肉",
+          "url": "https://www.xiachufang.com/category/1252/"
+        },
+        {
+          "name": "酸豇豆",
+          "url": "https://www.xiachufang.com/category/586/"
+        },
+        {
+          "name": "肉丸",
+          "url": "https://www.xiachufang.com/category/3035/"
+        },
+        {
+          "name": "午餐肉",
+          "url": "https://www.xiachufang.com/category/4444/"
+        },
+        {
+          "name": "蟹棒",
+          "url": "https://www.xiachufang.com/category/402/"
+        },
+        {
+          "name": "叉烧肉",
+          "url": "https://www.xiachufang.com/category/545/"
+        },
+        {
+          "name": "芽菜",
+          "url": "https://www.xiachufang.com/category/285/"
+        },
+        {
+          "name": "纳豆",
+          "url": "https://www.xiachufang.com/category/3196/"
+        },
+        {
+          "name": "大头菜",
+          "url": "https://www.xiachufang.com/category/1238/"
+        },
+        {
+          "name": "酸笋",
+          "url": "https://www.xiachufang.com/category/903/"
+        },
+        {
+          "name": "木鱼花",
+          "url": "https://www.xiachufang.com/category/4404/"
+        },
+        {
+          "name": "冬菜",
+          "url": "https://www.xiachufang.com/category/391/"
+        },
+        {
+          "name": "玉兰片",
+          "url": "https://www.xiachufang.com/category/93/"
+        },
+        {
+          "name": "泡萝卜",
+          "url": "https://www.xiachufang.com/category/882/"
+        },
+        {
+          "name": "咸黄瓜",
+          "url": "https://www.xiachufang.com/category/3094/"
+        },
+        {
+          "name": "叉烧",
+          "url": "https://www.xiachufang.com/category/1011415/"
+        },
+        {
+          "name": "酸豆角",
+          "url": "https://www.xiachufang.com/category/1007639/"
+        }
+      ]
     }
   }
 }

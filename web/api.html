@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HealthRecipe API 文档</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="icon" href="/static/leaf.svg" />
+    <script src="/static/api.js" defer></script>
+  </head>
+  <body>
+    <div class="api-docs">
+      <header>
+        <a href="/">回到厨房</a>
+        <h1>HealthRecipe API</h1>
+        <p>JSON API，同一份家庭数据。展开查看参数和数据格式。</p>
+        <p>
+          <a href="/openapi.json">下载 OpenAPI 定义</a> ·
+          <a href="/api/health">检查服务状态</a>
+        </p>
+        <p class="hint">
+          日期使用 YYYY-MM-DD；菜谱 ID 为正整数。写入请求使用 Content-Type:
+          application/json。服务默认只开放到本机。
+        </p>
+      </header>
+      <div id="api-content" aria-live="polite">正在读取 API 定义…</div>
+    </div>
+  </body>
+</html>

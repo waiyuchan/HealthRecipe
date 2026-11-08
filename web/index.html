@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e94b2c" />
+    <title>好好吃饭 · 和饭搭子商量这一餐</title>
+    <link rel="icon" href="/static/leaf.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/companion.js" defer></script>
+    <script src="/static/quick.js" defer></script>
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home"
+        ><img src="/static/leaf.svg" alt="" width="36" height="36" /><span
+          >好好吃饭<small>吃得有滋有味。</small></span
+        ></a
+      >
+      <nav aria-label="主导航">
+        <a href="#home" data-page="home">今天吃什么</a
+        ><a href="#chat" data-page="chat"
+          >饭搭子<span class="nav-new">AI</span></a
+        ><a href="#recipes" data-page="recipes">菜谱盒子</a
+        ><a href="#nutrition" data-page="nutrition">热量核算</a
+        ><a href="#plan" data-page="plan">餐单</a
+        ><a href="#history" data-page="history">吃饭记录</a
+        ><a href="#settings" data-page="settings">偏好</a>
+      </nav>
+      <button class="button primary small" id="new-recipe">＋ 快收菜谱</button>
+    </header>
+    <div class="workspace">
+      <div class="topbar">
+        <span id="date-label"></span
+        ><span id="connection-state">正在连接厨房</span>
+      </div>
+      <main id="content" tabindex="-1">
+        <p class="loading">厨房正在开火…</p>
+      </main>
+      <footer>
+        <span>好好吃饭，也好好生活。</span
+        ><span
+          >食物照片为 AI 生成示意图 · 热量为参考估算
+          <a href="/docs" target="_blank" rel="noopener">API</a></span
+        >
+      </footer>
+    </div>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <button class="close" type="button" aria-label="关闭弹窗">×</button>
+      <div id="modal-content"></div>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

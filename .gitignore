@@ -80,7 +80,6 @@ fabric.properties
 [Ll]ib
 [Ll]ib64
 [Ll]ocal
-[Ss]cripts
 pyvenv.cfg
 .venv
 pip-selfcheck.json
@@ -266,3 +265,14 @@ application.macosx
 out
 
 .idea
+# Household data and portable backups
+*.db
+*.db-*
+healthrecipe-*.json
+backups/
+.playwright-mcp/
+
+# Local model credentials
+.env
+.env.*
+!.env.example
